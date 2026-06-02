@@ -36,7 +36,7 @@ function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <PageHeader eyebrow="Development Services" title="Custom Software, Built by" highlight="Lumina Experts" description="The same instructors who teach your team can also ship your product. Engineering, design, and AI for teams that need world-class delivery." />
+      <PageHeader eyebrow="Development Services" title="Custom Software, Built by" highlight="mPayHub Experts" description="The same instructors who teach your team can also ship your product. Engineering, design, and AI for teams that need world-class delivery." />
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
