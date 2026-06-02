@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lumina Skill — Master New Skills with Expert-Led Online Courses" },
+      { title: "mPayHub — Master New Skills with Expert-Led Online Courses" },
       { name: "description", content: "Join thousands of learners worldwide. Learn at your own pace with world-class instructors and earn certified skills that matter." },
-      { name: "author", content: "Lumina Skill" },
-      { property: "og:title", content: "Lumina Skill" },
+      { name: "author", content: "mPayHub" },
+      { property: "og:title", content: "mPayHub" },
       { property: "og:description", content: "Master new skills with expert-led online courses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

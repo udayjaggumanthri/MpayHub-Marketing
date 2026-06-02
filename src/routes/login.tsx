@@ -6,8 +6,8 @@ import { Sparkles } from "lucide-react";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Log in — Lumina Skill" },
-      { name: "description", content: "Log in to your Lumina Skill account to continue learning." },
+      { title: "Log in — mPayHub" },
+      { name: "description", content: "Log in to your mPayHub account to continue learning." },
     ],
   }),
   component: LoginPage,
@@ -30,7 +30,7 @@ function LoginPage() {
         <div className="w-full max-w-md mx-6 rounded-3xl bg-white p-8 border border-border/60 shadow-soft">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs"><Sparkles className="size-3 text-brand-blue" /> Welcome back</div>
-            <h1 className="mt-4 text-3xl font-bold">Log in to <span className="text-gradient-brand">Lumina</span></h1>
+            <h1 className="mt-4 text-3xl font-bold">Log in to <span className="text-gradient-brand">mPayHub</span></h1>
             <p className="mt-2 text-sm text-muted-foreground">Continue your learning journey.</p>
           </div>
           <form className="mt-8 space-y-4" onSubmit={(e) => e.preventDefault()}>

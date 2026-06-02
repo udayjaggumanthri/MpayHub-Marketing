@@ -7,9 +7,9 @@ import { Check, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Lumina Skill" },
+      { title: "Pricing — mPayHub" },
       { name: "description", content: "Plans from ₹39,999 to ₹4,00,000. Pick the path that matches your career goals." },
-      { property: "og:title", content: "Pricing — Lumina Skill" },
+      { property: "og:title", content: "Pricing — mPayHub" },
       { property: "og:description", content: "Plans that match every learner's career goals." },
     ],
   }),

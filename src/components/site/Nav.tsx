@@ -12,7 +12,7 @@ export function Nav() {
             <BookOpen className="size-5 text-white" />
           </div>
           <div className="leading-tight">
-            <div className="font-display font-bold text-brand-teal text-lg">Lumina Skill</div>
+            <div className="font-display font-bold text-brand-teal text-lg">mPayHub</div>
             <div className="text-[10px] text-muted-foreground tracking-wide">Learn. Grow. Succeed.</div>
           </div>
         </Link>

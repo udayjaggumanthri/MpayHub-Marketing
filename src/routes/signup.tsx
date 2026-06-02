@@ -6,8 +6,8 @@ import { Check, Sparkles } from "lucide-react";
 export const Route = createFileRoute("/signup")({
   head: () => ({
     meta: [
-      { title: "Get Started — Lumina Skill" },
-      { name: "description", content: "Create your free Lumina Skill account and start learning today." },
+      { title: "Get Started — mPayHub" },
+      { name: "description", content: "Create your free mPayHub account and start learning today." },
     ],
   }),
   component: SignupPage,

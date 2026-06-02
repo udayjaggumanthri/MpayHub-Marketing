@@ -7,9 +7,9 @@ import { Code2, Smartphone, Cloud, Palette, Bot, ShieldCheck, ArrowRight, Check 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Development Services — Lumina Skill" },
-      { name: "description", content: "Custom software, mobile apps, cloud, design, and AI development services from Lumina Skill experts." },
-      { property: "og:title", content: "Development Services — Lumina Skill" },
+      { title: "Development Services — mPayHub" },
+      { name: "description", content: "Custom software, mobile apps, cloud, design, and AI development services from mPayHub experts." },
+      { property: "og:title", content: "Development Services — mPayHub" },
       { property: "og:description", content: "Custom development services for ambitious teams." },
     ],
   }),
@@ -36,7 +36,7 @@ function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <PageHeader eyebrow="Development Services" title="Custom Software, Built by" highlight="Lumina Experts" description="The same instructors who teach your team can also ship your product. Engineering, design, and AI for teams that need world-class delivery." />
+      <PageHeader eyebrow="Development Services" title="Custom Software, Built by" highlight="mPayHub Experts" description="The same instructors who teach your team can also ship your product. Engineering, design, and AI for teams that need world-class delivery." />
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

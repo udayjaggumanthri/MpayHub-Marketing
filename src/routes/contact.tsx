@@ -9,9 +9,9 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Lumina Skill" },
-      { name: "description", content: "Get in touch with the Lumina Skill team. We reply within one business day." },
-      { property: "og:title", content: "Contact — Lumina Skill" },
+      { title: "Contact — mPayHub" },
+      { name: "description", content: "Get in touch with the mPayHub team. We reply within one business day." },
+      { property: "og:title", content: "Contact — mPayHub" },
       { property: "og:description", content: "We reply within one business day." },
     ],
   }),
@@ -46,7 +46,7 @@ function ContactPage() {
         <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-1 space-y-4">
             {[
-              { icon: Mail, label: "Email", value: "hello@luminaskill.com" },
+              { icon: Mail, label: "Email", value: "hello@mpayhub.com" },
               { icon: Phone, label: "Phone", value: "+91 80 4567 8900" },
               { icon: MapPin, label: "HQ", value: "Bangalore, India" },
             ].map((c) => (
