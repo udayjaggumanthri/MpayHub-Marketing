@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Menu, ChevronDown } from "lucide-react";
+import { Sparkles, Menu } from "lucide-react";
 import logo from "@/assets/mpayhub-logo.png.asset.json";
 
 const linkCls = "hover:text-brand-blue transition-colors";

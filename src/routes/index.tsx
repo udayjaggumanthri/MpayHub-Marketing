@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import {
-  BookOpen, Sparkles, GraduationCap, Award, Users, Globe, Smartphone,
-  ShieldCheck, Video, MessageCircle, Infinity as InfinityIcon,
-  ArrowRight, Play, Star, Check,
+  Sparkles, ShieldCheck, ArrowRight, Check, Smartphone, Tv, Zap, Flame,
+  Droplet, Wifi, Car, Landmark, FileText, Wallet, Building2, Repeat,
+  CreditCard, Network, BarChart3, Headphones, Lock, Rocket, Globe,
 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
@@ -11,83 +11,71 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "mPayHub — Master New Skills with Expert-Led Online Courses" },
-      { name: "description", content: "Join 50,000+ learners worldwide. Expert-led online courses with industry certifications." },
-      { property: "og:title", content: "mPayHub" },
-      { property: "og:description", content: "Master new skills with expert-led online courses." },
+      { title: "mPayHub — Digital Payment Solutions for Growing Businesses" },
+      { name: "description", content: "Unified fintech platform for recharge, bill payments, AEPS, BBPS, money transfer and API banking. Built for retailers, distributors and enterprises." },
+      { property: "og:title", content: "mPayHub — Digital Payment Infrastructure" },
+      { property: "og:description", content: "Secure, scalable B2B fintech platform powering India's retailers, distributors and enterprises." },
     ],
   }),
   component: Index,
 });
 
-function FloatingIcon({ Icon, className }: { Icon: typeof BookOpen; className: string }) {
-  return (
-    <div className={`absolute size-14 rounded-2xl bg-white shadow-soft grid place-items-center ${className}`}>
-      <Icon className="size-6 text-brand-blue" />
-    </div>
-  );
-}
-
 function Hero() {
+  const trust = [
+    "Secure and reliable transaction processing",
+    "Multi-service payment ecosystem",
+    "Real-time settlements and reporting",
+    "Scalable B2B distribution network",
+    "Dedicated partner support",
+    "API-driven financial solutions",
+  ];
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
       <div className="absolute inset-0 -z-0 opacity-60">
         <div className="absolute -top-20 -left-32 size-96 rounded-full bg-brand-teal/20 blur-3xl" />
         <div className="absolute -bottom-20 -right-32 size-[28rem] rounded-full bg-brand-blue/20 blur-3xl" />
       </div>
-      <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-28">
-        <FloatingIcon Icon={BookOpen} className="left-6 top-32 hidden md:grid" />
-        <FloatingIcon Icon={GraduationCap} className="right-12 top-20 hidden md:grid" />
-        <FloatingIcon Icon={Sparkles} className="left-12 bottom-40 hidden md:grid" />
-        <FloatingIcon Icon={Award} className="right-6 bottom-32 hidden md:grid" />
-
-        <div className="mx-auto max-w-3xl text-center">
+      <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-white/80 px-4 py-1.5 text-xs font-medium shadow-card">
             <Sparkles className="size-3.5 text-brand-blue" />
-            <span className="rounded-full bg-brand-blue/10 px-2 py-0.5 text-brand-blue font-semibold">New</span>
-            <span className="text-muted-foreground">AI-Powered Learning Platform</span>
+            <span className="rounded-full bg-brand-blue/10 px-2 py-0.5 text-brand-blue font-semibold">Fintech</span>
+            <span className="text-muted-foreground">Trusted Digital Financial Infrastructure</span>
           </div>
-          <h1 className="mt-8 text-5xl md:text-7xl font-extrabold leading-[1.05] text-foreground">
-            Master New Skills with{" "}
-            <span className="text-gradient-brand">Expert-Led</span>{" "}
-            Online Courses
+          <h1 className="mt-6 text-4xl md:text-6xl font-extrabold leading-[1.05] text-foreground">
+            Digital Payment Solutions for{" "}
+            <span className="text-gradient-brand">Growing Businesses</span>
           </h1>
-          <p className="mt-7 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Join thousands of learners from India and across the globe. Learn at your own pace with world-class instructors and get certified in the skills that matter most.
+          <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+            Empower your business with a unified platform for recharge services, bill payments, banking solutions and digital financial services. Our secure fintech infrastructure helps retailers, distributors and enterprises deliver seamless transactions while maximizing revenue.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a href="#courses" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-7 py-3.5 font-semibold shadow-soft hover:bg-brand-blue transition">
-              Explore Courses <ArrowRight className="size-4" />
-            </a>
-            <a href="#" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 font-semibold hover:border-brand-blue transition">
-              <Play className="size-4 fill-foreground" /> Watch Demo
-            </a>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-7 py-3.5 font-semibold shadow-soft hover:bg-brand-blue transition">
+              Start Your Growth Journey <ArrowRight className="size-4" />
+            </Link>
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 font-semibold hover:border-brand-blue transition">
+              Explore Services
+            </Link>
           </div>
-
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {[
-              { icon: Users, value: "50K+", label: "Active Learners" },
-              { icon: Award, value: "200+", label: "Expert Instructors" },
-              { icon: Globe, value: "100+", label: "Countries Reached" },
-            ].map((s) => (
-              <div key={s.label} className="rounded-2xl bg-white p-6 shadow-card border border-border/60">
-                <div className="mx-auto size-12 rounded-xl bg-accent grid place-items-center mb-3">
-                  <s.icon className="size-5 text-brand-teal" />
-                </div>
-                <div className="text-3xl font-bold text-brand-blue">{s.value}</div>
-                <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-14">
-            <div className="text-xs font-semibold tracking-widest text-muted-foreground">TRUSTED BY LEARNERS FROM</div>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
-              {[
-                ["🇮🇳", "India"], ["🇺🇸", "USA"], ["🇬🇧", "UK"], ["🇦🇪", "UAE"], ["🇸🇬", "Singapore"],
-              ].map(([f, n]) => (
-                <div key={n} className="flex items-center gap-2 font-medium">
-                  <span className="text-2xl">{f}</span> {n}
+        </div>
+        <div className="lg:col-span-5">
+          <div className="rounded-3xl bg-white border border-border/60 shadow-soft p-7">
+            <div className="text-xs font-semibold tracking-wider text-brand-blue uppercase">Why Businesses Trust Us</div>
+            <ul className="mt-5 space-y-3">
+              {trust.map((t) => (
+                <li key={t} className="flex items-start gap-3 text-sm">
+                  <span className="mt-0.5 size-5 rounded-full bg-gradient-brand grid place-items-center flex-shrink-0">
+                    <Check className="size-3 text-white" />
+                  </span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 grid grid-cols-3 gap-3 text-center">
+              {[["99.9%", "Uptime"], ["24/7", "Support"], ["100%", "Secure"]].map(([v, l]) => (
+                <div key={l} className="rounded-xl bg-muted/50 p-3">
+                  <div className="text-lg font-bold text-brand-blue">{v}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{l}</div>
                 </div>
               ))}
             </div>
@@ -98,47 +86,109 @@ function Hero() {
   );
 }
 
-const features = [
-  { icon: Globe, title: "Learn Anywhere", desc: "Access courses from anywhere in the world. Our platform supports learners from India and 100+ countries." },
-  { icon: Smartphone, title: "Mobile Learning", desc: "Download courses for offline access. Learn on-the-go with our iOS and Android apps." },
-  { icon: Award, title: "Verified Certificates", desc: "Earn industry-recognized certificates that you can share on LinkedIn and with employers." },
-  { icon: GraduationCap, title: "Expert Instructors", desc: "Learn from industry professionals with years of real-world experience in their fields." },
-  { icon: InfinityIcon, title: "Lifetime Access", desc: "Purchase once, learn forever. Get lifetime access to course content and future updates." },
-  { icon: ShieldCheck, title: "Secure Payments", desc: "Multiple payment options including UPI, cards, and net banking. SSL encrypted for your safety." },
-  { icon: Video, title: "HD Video Content", desc: "Crystal clear video lessons with subtitles in multiple languages including Hindi and English." },
-  { icon: MessageCircle, title: "Community Support", desc: "Join our vibrant community of learners. Get help from peers and instructors alike." },
+const services = [
+  { icon: Smartphone, title: "Mobile Recharge" },
+  { icon: Tv, title: "DTH Recharge" },
+  { icon: Zap, title: "Electricity Bills" },
+  { icon: Flame, title: "Gas Bills" },
+  { icon: Droplet, title: "Water Bills" },
+  { icon: Wifi, title: "Broadband Bills" },
+  { icon: Car, title: "FASTag Recharge" },
+  { icon: Landmark, title: "AEPS Banking" },
+  { icon: FileText, title: "BBPS Services" },
+  { icon: Repeat, title: "Money Transfer" },
+  { icon: Wallet, title: "Aadhaar Pay" },
+  { icon: CreditCard, title: "Payment Gateway" },
 ];
 
-function Features() {
+function Services() {
   return (
-    <section id="about" className="py-24 bg-background">
+    <section className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Why mPayHub</div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Everything You Need to <span className="text-gradient-brand">Succeed</span></h2>
-          <p className="mt-4 text-muted-foreground">Our platform is built with learners in mind. From flexible scheduling to world-class instructors, we have everything you need to achieve your goals.</p>
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Service Overview</div>
+          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Comprehensive <span className="text-gradient-brand">Digital Payment Services</span></h2>
+          <p className="mt-4 text-muted-foreground">Access every major recharge, bill payment, banking, and financial service through a single platform — built for retailers, distributors and enterprises seeking efficient transaction management.</p>
         </div>
+        <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          {services.map((s) => (
+            <div key={s.title} className="rounded-2xl bg-white p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center">
+              <div className="mx-auto size-12 rounded-xl bg-gradient-brand grid place-items-center mb-3">
+                <s.icon className="size-5 text-white" />
+              </div>
+              <div className="text-sm font-semibold leading-snug">{s.title}</div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 font-semibold hover:border-brand-blue transition shadow-card">
+            View All Services <ArrowRight className="size-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {features.map((f) => (
-            <div key={f.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all">
+const partnerTiers = [
+  { name: "Retailer", income: "Up to ₹300/day", tag: "Entry Level" },
+  { name: "Distributor", income: "₹1,000+/day", tag: "Popular" },
+  { name: "Master Distributor", income: "₹5,000+/day", tag: "Professional" },
+  { name: "Super Distributor", income: "₹10,000+/day", tag: "Enterprise" },
+];
+
+function PartnerEcosystem() {
+  return (
+    <section className="py-24 bg-gradient-hero">
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Partner Ecosystem</div>
+          <h2 className="mt-3 text-4xl md:text-5xl font-bold leading-tight">Build a <span className="text-gradient-brand">Profitable Fintech</span> Business</h2>
+          <p className="mt-5 text-muted-foreground leading-relaxed">Join a growing network of retailers, distributors and business partners who leverage our technology platform to generate recurring revenue through digital payment services. Whether you run a small retail outlet or a large distribution network, our partnership models are engineered for sustainable growth.</p>
+          <Link to="/pricing" className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-7 py-3.5 font-semibold shadow-soft hover:bg-brand-blue transition">
+            See Partner Plans <ArrowRight className="size-4" />
+          </Link>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {partnerTiers.map((p) => (
+            <div key={p.name} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">{p.tag}</div>
+              <div className="mt-2 text-xl font-bold">{p.name}</div>
+              <div className="mt-3 text-2xl font-bold text-gradient-brand">{p.income}</div>
+              <div className="mt-1 text-xs text-muted-foreground">Income potential</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const reasons = [
+  { icon: Lock, title: "Secure Processing", desc: "Bank-grade encryption, fraud monitoring, and compliance with financial regulations." },
+  { icon: ShieldCheck, title: "Regulatory Compliance", desc: "Aligned with industry standards and KYC norms for trusted operations." },
+  { icon: Network, title: "Reliable Infrastructure", desc: "Resilient payment rails engineered for high transaction volumes." },
+  { icon: Rocket, title: "Fast Activation", desc: "Onboard quickly and start transacting after KYC verification." },
+  { icon: BarChart3, title: "Real-time Reporting", desc: "Live dashboards for transactions, settlements and commissions." },
+  { icon: Headphones, title: "Dedicated Support", desc: "Account managers and technical teams ready to help you grow." },
+];
+
+function Trust() {
+  return (
+    <section className="py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center max-w-2xl mx-auto">
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Trust & Reliability</div>
+          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Why Businesses <span className="text-gradient-brand">Trust Us</span></h2>
+        </div>
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {reasons.map((r) => (
+            <div key={r.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
               <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4">
-                <f.icon className="size-5 text-white" />
+                <r.icon className="size-5 text-white" />
               </div>
-              <h3 className="font-semibold text-lg">{f.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-5">
-          {[
-            ["98%", "Student Satisfaction"], ["4.8/5", "Average Course Rating"],
-            ["500K+", "Courses Completed"], ["24/7", "Support Available"],
-          ].map(([v, l]) => (
-            <div key={l} className="rounded-2xl bg-gradient-hero p-8 text-center border border-border/60">
-              <div className="text-4xl font-bold text-gradient-brand">{v}</div>
-              <div className="mt-2 text-sm text-muted-foreground">{l}</div>
+              <h3 className="font-semibold text-lg">{r.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
             </div>
           ))}
         </div>
@@ -147,99 +197,54 @@ function Features() {
   );
 }
 
-const courses = [
-  { title: "Full Stack Web Development Bootcamp", author: "Rahul Sharma", desc: "Master React, Node.js, MongoDB, and modern web technologies from scratch.", price: "₹89,999", old: "₹1.50L", off: "40% OFF", weeks: "24 weeks", level: "Beginner to Advanced", students: "45,200", rating: "4.9", tags: ["Bestseller", "Featured"] },
-  { title: "Python for Data Science & ML", author: "Dr. Priya Patel", desc: "Learn Python, Pandas, NumPy, Scikit-learn, TensorFlow, and build production-ready ML models.", price: "₹79,999", old: "₹1.30L", off: "38% OFF", weeks: "20 weeks", level: "Intermediate", students: "38,500", rating: "4.8", tags: ["Bestseller", "Featured"] },
-  { title: "UI/UX Design Masterclass", author: "Sarah Johnson", desc: "Design stunning interfaces with Figma, learn design systems, UX research, and prototyping.", price: "₹59,999", old: "₹99,999", off: "40% OFF", weeks: "16 weeks", level: "Beginner to Intermediate", students: "28,700", rating: "4.7", tags: ["Bestseller"] },
-  { title: "Digital Marketing Complete Guide", author: "Amit Kumar", desc: "SEO, Social Media, Google Ads, Content Marketing, Analytics, and Growth Hacking mastery.", price: "₹49,999", old: "₹89,999", off: "44% OFF", weeks: "12 weeks", level: "Beginner", students: "52,100", rating: "4.6", tags: ["Bestseller"] },
-  { title: "AWS Cloud Solutions Architect Pro", author: "David Anderson", desc: "Prepare for AWS certification and master cloud architecture, DevOps, and serverless tech.", price: "₹1.20L", old: "₹2.00L", off: "40% OFF", weeks: "20 weeks", level: "Advanced", students: "31,400", rating: "4.9", tags: ["Featured"] },
-  { title: "Cybersecurity & Ethical Hacking", author: "Alex Chen", desc: "Learn penetration testing, network security, cryptography, and earn industry certifications.", price: "₹1.50L", old: "₹2.50L", off: "40% OFF", weeks: "22 weeks", level: "Advanced", students: "24,800", rating: "4.8", tags: ["Featured"] },
-];
-
-function Courses() {
-  const cats = ["All Courses", "Web", "Data", "Design", "Business", "Languages", "Security"];
+function GrowthCTA() {
   return (
-    <section id="courses" className="py-24 bg-muted/40">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Popular Courses</div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Explore Our <span className="text-gradient-brand">Course Catalog</span></h2>
-          <p className="mt-4 text-muted-foreground">Choose from over 200+ courses designed by industry experts.</p>
-        </div>
-
-        <div className="mt-10 flex flex-wrap gap-2 justify-center">
-          {cats.map((c, i) => (
-            <button key={c} className={`px-4 py-2 rounded-full text-sm font-medium border transition ${i === 0 ? "bg-brand-blue-deep text-white border-transparent" : "bg-white border-border hover:border-brand-blue"}`}>{c}</button>
-          ))}
-        </div>
-
-        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((c) => (
-            <article key={c.title} className="rounded-2xl bg-white overflow-hidden border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all">
-              <div className="relative aspect-video bg-gradient-brand">
-                <div className="absolute inset-0 grid place-items-center text-white/90">
-                  <BookOpen className="size-12 opacity-50" />
-                </div>
-                <div className="absolute top-3 left-3 flex gap-1.5">
-                  {c.tags.map((t) => (
-                    <span key={t} className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded ${t === "Bestseller" ? "bg-amber-400 text-amber-950" : "bg-white text-brand-blue"}`}>{t}</span>
-                  ))}
-                </div>
-                <div className="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded">{c.off}</div>
+    <section className="py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-brand text-white p-12 md:p-16">
+          <div className="absolute -top-20 -right-20 size-72 rounded-full bg-white/10 blur-3xl" />
+          <div className="relative grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Globe className="size-3.5" /> Business Growth</div>
+              <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">Scale Your Business with <span className="opacity-90">Confidence</span></h2>
+              <p className="mt-4 text-white/90 leading-relaxed">Our platform provides the tools, technology and support to expand your customer base, increase transaction volumes and maximize profitability.</p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">
+                  Start Your Growth Journey <ArrowRight className="size-4" />
+                </Link>
+                <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-semibold hover:bg-white/10 transition">
+                  Talk to Sales
+                </Link>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                  <span>⏱ {c.weeks}</span><span>•</span><span>{c.level}</span>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[["10K+", "Active Partners"], ["50M+", "Transactions"], ["28", "States Covered"], ["₹100Cr+", "Settled Monthly"]].map(([v, l]) => (
+                <div key={l} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-5">
+                  <div className="text-3xl font-bold">{v}</div>
+                  <div className="mt-1 text-xs uppercase tracking-wider text-white/80">{l}</div>
                 </div>
-                <h3 className="font-bold text-lg leading-snug">{c.title}</h3>
-                <p className="mt-1 text-xs text-muted-foreground">by {c.author}</p>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-2">{c.desc}</p>
-                <div className="mt-4 flex items-center justify-between text-sm">
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <span className="flex items-center gap-1"><Users className="size-3.5" /> {c.students}</span>
-                    <span className="flex items-center gap-1"><Star className="size-3.5 fill-amber-400 text-amber-400" /> {c.rating}</span>
-                  </div>
-                </div>
-                <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
-                  <div>
-                    <div className="text-xl font-bold text-brand-blue">{c.price}</div>
-                    <div className="text-xs text-muted-foreground line-through">{c.old}</div>
-                  </div>
-                  <button className="inline-flex items-center gap-1.5 bg-gradient-brand text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-95">
-                    Enroll <ArrowRight className="size-3.5" />
-                  </button>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <a href="#" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 font-semibold hover:border-brand-blue transition shadow-card">
-            View All 200+ Courses <ArrowRight className="size-4" />
-          </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-const plans = [
-  { name: "Foundation", desc: "Perfect for beginners starting their learning journey", price: "₹39,999", old: "₹59,999", period: "6 months access", off: "33% OFF", features: ["Access to 25+ foundational courses", "HD video content", "Mobile app access", "Course completion certificates", "Community forum access", "Email support (48hr response)", "Downloadable resources"], cta: "Get Started" },
-  { name: "Professional", desc: "For career-focused learners seeking industry skills", price: "₹99,999", old: "₹1.50L", period: "12 months access", off: "33% OFF", popular: true, features: ["Access to 100+ professional courses", "Project-based learning paths", "Industry-recognized certificates", "1-on-1 mentor sessions (4/month)", "Resume & portfolio review", "Job placement assistance", "Priority support (24hr response)", "Live doubt-clearing sessions", "Mock interviews with feedback"], cta: "Get Started" },
-  { name: "Premium Elite", desc: "Complete transformation with personalized mentorship", price: "₹2.00L", old: "₹3.00L", period: "24 months access", off: "33% OFF", features: ["Unlimited course access", "Personalized learning roadmap", "Weekly 1-on-1 mentorship", "Guaranteed internship placement", "Real-world project experience", "Industry networking events", "Career transition support", "LinkedIn profile optimization", "Dedicated success manager", "Lifetime alumni network access"], cta: "Get Started" },
-  { name: "Enterprise", desc: "For organizations training teams at scale", price: "₹4.00L", old: "₹6.00L", period: "Custom duration", off: "33% OFF", features: ["Everything in Premium Elite", "Custom course development", "Team analytics dashboard", "LMS integration support", "Dedicated account manager", "On-site training options", "White-label certificates", "Compliance & reporting tools", "Bulk enrollment (50+ seats)", "24/7 priority support"], cta: "Contact Sales" },
-];
-
-function Pricing() {
+function Index() {
   return (
-    <section id="pricing" className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Investment Plans</div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Invest in Your <span className="text-gradient-brand">Future</span></h2>
-          <p className="mt-4 text-muted-foreground">Comprehensive programs from ₹39,999 to ₹4,00,000. Choose the plan that matches your career goals.</p>
-        </div>
+    <div className="min-h-screen bg-background">
+      <Nav />
+      <Hero />
+      <Services />
+      <PartnerEcosystem />
+      <Trust />
+      <GrowthCTA />
+      <Footer />
+    </div>
+  );
+}
 
         <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {plans.map((p) => (
