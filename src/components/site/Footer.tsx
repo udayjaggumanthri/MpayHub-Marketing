@@ -3,9 +3,9 @@ import logo from "@/assets/mpayhub-logo.png.asset.json";
 
 export function Footer() {
   const cols = [
-    { h: "Platform", l: [["Courses", "/courses"], ["Pricing", "/pricing"], ["Development Services", "/services"], ["Certificates", "/courses"]] as const },
-    { h: "Company", l: [["About", "/about"], ["Careers", "/about"], ["Press", "/about"], ["Contact", "/contact"]] as const },
-    { h: "Resources", l: [["Help Center", "/contact"], ["Community", "/about"], ["Blog", "/about"], ["Terms & Privacy", "/about"]] as const },
+    { h: "Platform", l: [["Services", "/services"], ["Partner Plans", "/pricing"], ["API Banking", "/services"], ["Payment Gateway", "/services"]] as const },
+    { h: "Company", l: [["About", "/about"], ["Leadership", "/about"], ["Compliance", "/about"], ["Contact", "/contact"]] as const },
+    { h: "Resources", l: [["Help Center", "/contact"], ["Onboarding", "/signup"], ["Partner Login", "/login"], ["Terms & Privacy", "/about"]] as const },
   ];
   return (
     <footer className="bg-foreground text-background py-14">
@@ -14,7 +14,7 @@ export function Footer() {
           <Link to="/" className="inline-flex items-center bg-white rounded-xl p-3" aria-label="mPayHub home">
             <img src={logo.url} alt="mPayHub" className="h-12 w-auto object-contain" />
           </Link>
-          <p className="mt-5 text-sm text-background/70 leading-relaxed">Enterprise-grade learning and development services — engineered for ambitious teams.</p>
+          <p className="mt-5 text-sm text-background/70 leading-relaxed">Secure digital payment infrastructure for retailers, distributors and enterprises across India.</p>
         </div>
         {cols.map((c) => (
           <div key={c.h}>
@@ -29,7 +29,7 @@ export function Footer() {
       </div>
       <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-background/10 text-xs text-background/60 flex flex-wrap items-center justify-between gap-3">
         <div>© 2026 mPayHub. All rights reserved.</div>
-        <div>Made with care for learners worldwide.</div>
+        <div>Building India's fintech infrastructure.</div>
       </div>
     </footer>
   );
