@@ -7,9 +7,9 @@ import { BookOpen, Users, Star, ArrowRight, Search } from "lucide-react";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses — Lumina Skill" },
+      { title: "Courses — mPayHub" },
       { name: "description", content: "Explore 200+ expert-led online courses across web development, data science, design, business, and more." },
-      { property: "og:title", content: "Courses — Lumina Skill" },
+      { property: "og:title", content: "Courses — mPayHub" },
       { property: "og:description", content: "200+ expert-led online courses." },
     ],
   }),

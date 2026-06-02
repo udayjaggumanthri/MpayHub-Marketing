@@ -7,9 +7,9 @@ import { Code2, Smartphone, Cloud, Palette, Bot, ShieldCheck, ArrowRight, Check 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Development Services — Lumina Skill" },
-      { name: "description", content: "Custom software, mobile apps, cloud, design, and AI development services from Lumina Skill experts." },
-      { property: "og:title", content: "Development Services — Lumina Skill" },
+      { title: "Development Services — mPayHub" },
+      { name: "description", content: "Custom software, mobile apps, cloud, design, and AI development services from mPayHub experts." },
+      { property: "og:title", content: "Development Services — mPayHub" },
       { property: "og:description", content: "Custom development services for ambitious teams." },
     ],
   }),

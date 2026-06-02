@@ -16,7 +16,7 @@ export function Footer() {
               <BookOpen className="size-5 text-white" />
             </div>
             <div>
-              <div className="font-display font-bold text-lg">Lumina Skill</div>
+              <div className="font-display font-bold text-lg">mPayHub</div>
               <div className="text-[10px] text-background/60 tracking-wide">Learn. Grow. Succeed.</div>
             </div>
           </Link>
@@ -34,7 +34,7 @@ export function Footer() {
         ))}
       </div>
       <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-background/10 text-xs text-background/60 flex flex-wrap items-center justify-between gap-3">
-        <div>© 2026 Lumina Skill. All rights reserved.</div>
+        <div>© 2026 mPayHub. All rights reserved.</div>
         <div>Made with care for learners worldwide.</div>
       </div>
     </footer>

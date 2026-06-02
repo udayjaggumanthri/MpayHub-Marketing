@@ -6,8 +6,8 @@ import { Sparkles } from "lucide-react";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Log in — Lumina Skill" },
-      { name: "description", content: "Log in to your Lumina Skill account to continue learning." },
+      { title: "Log in — mPayHub" },
+      { name: "description", content: "Log in to your mPayHub account to continue learning." },
     ],
   }),
   component: LoginPage,

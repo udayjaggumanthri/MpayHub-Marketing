@@ -11,9 +11,9 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lumina Skill — Master New Skills with Expert-Led Online Courses" },
+      { title: "mPayHub — Master New Skills with Expert-Led Online Courses" },
       { name: "description", content: "Join 50,000+ learners worldwide. Expert-led online courses with industry certifications." },
-      { property: "og:title", content: "Lumina Skill" },
+      { property: "og:title", content: "mPayHub" },
       { property: "og:description", content: "Master new skills with expert-led online courses." },
     ],
   }),
@@ -114,7 +114,7 @@ function Features() {
     <section id="about" className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Why Lumina Skill</div>
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Why mPayHub</div>
           <h2 className="mt-3 text-4xl md:text-5xl font-bold">Everything You Need to <span className="text-gradient-brand">Succeed</span></h2>
           <p className="mt-4 text-muted-foreground">Our platform is built with learners in mind. From flexible scheduling to world-class instructors, we have everything you need to achieve your goals.</p>
         </div>
@@ -285,11 +285,11 @@ function Pricing() {
 }
 
 const testimonials = [
-  { quote: "Lumina Skill transformed my career. The Full Stack course helped me land a job at a top tech company. The instructors are amazing and the content is up-to-date with industry standards.", course: "Full Stack Web Development", initials: "AV", name: "Aditya Verma", role: "Software Developer • Bangalore, India" },
+  { quote: "mPayHub transformed my career. The Full Stack course helped me land a job at a top tech company. The instructors are amazing and the content is up-to-date with industry standards.", course: "Full Stack Web Development", initials: "AV", name: "Aditya Verma", role: "Software Developer • Bangalore, India" },
   { quote: "As an international student, I was amazed by the quality of courses at such affordable prices. The Digital Marketing course gave me practical skills I use every day at work.", course: "Digital Marketing", initials: "SM", name: "Sarah Mitchell", role: "Marketing Manager • London, UK" },
   { quote: "The Python for Data Science course is exceptional. I went from knowing nothing about Python to building ML models in just 3 months!", course: "Python for Data Science", initials: "PS", name: "Priya Sharma", role: "Data Analyst • Bangalore, India" },
   { quote: "The UI/UX Design Masterclass was exactly what I needed to level up my skills. The project-based approach helped me build an impressive portfolio.", course: "UI/UX Design", initials: "JC", name: "James Chen", role: "UI Designer • Singapore" },
-  { quote: "Got AWS certified thanks to Lumina Skill! The course was comprehensive and the practice exams were spot-on. Highly recommend for cloud computing.", course: "AWS Solutions Architect", initials: "RK", name: "Ravi Kumar", role: "Cloud Engineer • Hyderabad, India" },
+  { quote: "Got AWS certified thanks to mPayHub! The course was comprehensive and the practice exams were spot-on. Highly recommend for cloud computing.", course: "AWS Solutions Architect", initials: "RK", name: "Ravi Kumar", role: "Cloud Engineer • Hyderabad, India" },
   { quote: "I love that I can learn at my own pace. The mobile app is fantastic for learning during my commute. Already completed 5 courses and counting!", course: "Business English", initials: "ET", name: "Emma Thompson", role: "Freelancer • Toronto, Canada" },
 ];
 
@@ -300,7 +300,7 @@ function Testimonials() {
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Student Stories</div>
           <h2 className="mt-3 text-4xl md:text-5xl font-bold">Trusted by Learners <span className="text-gradient-brand">Worldwide</span></h2>
-          <p className="mt-4 text-muted-foreground">Join over 50,000 students who have transformed their careers with Lumina Skill.</p>
+          <p className="mt-4 text-muted-foreground">Join over 50,000 students who have transformed their careers with mPayHub.</p>
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">

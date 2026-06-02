@@ -9,9 +9,9 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Lumina Skill" },
-      { name: "description", content: "Get in touch with the Lumina Skill team. We reply within one business day." },
-      { property: "og:title", content: "Contact — Lumina Skill" },
+      { title: "Contact — mPayHub" },
+      { name: "description", content: "Get in touch with the mPayHub team. We reply within one business day." },
+      { property: "og:title", content: "Contact — mPayHub" },
       { property: "og:description", content: "We reply within one business day." },
     ],
   }),

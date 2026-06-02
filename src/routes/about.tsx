@@ -7,9 +7,9 @@ import { Heart, Target, Globe, Sparkles, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Lumina Skill" },
-      { name: "description", content: "Lumina Skill is on a mission to make world-class learning accessible to everyone, everywhere." },
-      { property: "og:title", content: "About — Lumina Skill" },
+      { title: "About — mPayHub" },
+      { name: "description", content: "mPayHub is on a mission to make world-class learning accessible to everyone, everywhere." },
+      { property: "og:title", content: "About — mPayHub" },
       { property: "og:description", content: "Our mission, our people, our story." },
     ],
   }),
@@ -33,7 +33,7 @@ function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <PageHeader eyebrow="Our Story" title="Learning that meets" highlight="Real Life" description="We started Lumina Skill because the best teachers we knew weren't on the biggest platforms. Now they are — and 50,000+ learners are building careers because of it." />
+      <PageHeader eyebrow="Our Story" title="Learning that meets" highlight="Real Life" description="We started mPayHub because the best teachers we knew weren't on the biggest platforms. Now they are — and 50,000+ learners are building careers because of it." />
 
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-6">
