@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import {
   BookOpen, Sparkles, GraduationCap, Award, Users, Globe, Smartphone,
   ShieldCheck, Video, MessageCircle, Infinity as InfinityIcon,
-  ArrowRight, Play, Star, Check, ChevronRight, Menu,
+  ArrowRight, Play, Star, Check,
 } from "lucide-react";
+import { Nav } from "@/components/site/Nav";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
