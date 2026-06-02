@@ -370,43 +370,6 @@ function CTA() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="bg-foreground text-background py-14">
-      <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-4 gap-10">
-        <div>
-          <div className="flex items-center gap-3">
-            <div className="size-10 rounded-xl bg-gradient-brand grid place-items-center">
-              <BookOpen className="size-5 text-white" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg">Lumina Skill</div>
-              <div className="text-[10px] text-background/60 tracking-wide">Learn. Grow. Succeed.</div>
-            </div>
-          </div>
-          <p className="mt-5 text-sm text-background/70 leading-relaxed">Empowering learners worldwide with expert-led courses and industry-recognized certifications.</p>
-        </div>
-        {[
-          { h: "Platform", l: ["Courses", "Pricing", "Development Services", "Certificates"] },
-          { h: "Company", l: ["About", "Careers", "Press", "Contact"] },
-          { h: "Resources", l: ["Help Center", "Community", "Blog", "Terms & Privacy"] },
-        ].map((c) => (
-          <div key={c.h}>
-            <div className="font-semibold mb-4">{c.h}</div>
-            <ul className="space-y-2 text-sm text-background/70">
-              {c.l.map((i) => <li key={i}><a href="#" className="hover:text-background">{i}</a></li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-background/10 text-xs text-background/60 flex flex-wrap items-center justify-between gap-3">
-        <div>© 2026 Lumina Skill. All rights reserved.</div>
-        <div>Made with care for learners worldwide.</div>
-      </div>
-    </footer>
-  );
-}
-
 function Index() {
   return (
     <div className="min-h-screen bg-background">
