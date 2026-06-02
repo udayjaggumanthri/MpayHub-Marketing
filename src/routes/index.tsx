@@ -20,39 +20,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-function Nav() {
-  return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/60">
-      <div className="mx-auto max-w-7xl px-6 h-18 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3">
-          <div className="size-11 rounded-xl bg-gradient-brand grid place-items-center shadow-soft">
-            <BookOpen className="size-5 text-white" />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display font-bold text-brand-teal text-lg">Lumina Skill</div>
-            <div className="text-[10px] text-muted-foreground tracking-wide">Learn. Grow. Succeed.</div>
-          </div>
-        </a>
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-foreground/80">
-          <a href="#" className="hover:text-brand-blue">Home</a>
-          <a href="#courses" className="hover:text-brand-blue flex items-center gap-1">Courses <ChevronRight className="size-3 rotate-90" /></a>
-          <a href="#services" className="hover:text-brand-blue">Development Services</a>
-          <a href="#pricing" className="hover:text-brand-blue">Pricing</a>
-          <a href="#about" className="hover:text-brand-blue">About</a>
-          <a href="#contact" className="hover:text-brand-blue">Contact</a>
-        </nav>
-        <div className="flex items-center gap-4">
-          <a href="#" className="hidden sm:inline text-sm font-medium hover:text-brand-blue">Log in</a>
-          <a href="#" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand text-white px-5 py-2.5 text-sm font-semibold shadow-soft hover:opacity-95 transition">
-            <Sparkles className="size-4" /> Get Started
-          </a>
-          <button className="lg:hidden"><Menu className="size-6" /></button>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 function FloatingIcon({ Icon, className }: { Icon: typeof BookOpen; className: string }) {
   return (
     <div className={`absolute size-14 rounded-2xl bg-white shadow-soft grid place-items-center ${className}`}>
