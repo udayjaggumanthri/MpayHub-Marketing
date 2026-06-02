@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import {
   BookOpen, Sparkles, GraduationCap, Award, Users, Globe, Smartphone,
   ShieldCheck, Video, MessageCircle, Infinity as InfinityIcon,
-  ArrowRight, Play, Star, Check, ChevronRight, Menu,
+  ArrowRight, Play, Star, Check,
 } from "lucide-react";
+import { Nav } from "@/components/site/Nav";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,39 +19,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
-
-function Nav() {
-  return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/60">
-      <div className="mx-auto max-w-7xl px-6 h-18 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3">
-          <div className="size-11 rounded-xl bg-gradient-brand grid place-items-center shadow-soft">
-            <BookOpen className="size-5 text-white" />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display font-bold text-brand-teal text-lg">Lumina Skill</div>
-            <div className="text-[10px] text-muted-foreground tracking-wide">Learn. Grow. Succeed.</div>
-          </div>
-        </a>
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-foreground/80">
-          <a href="#" className="hover:text-brand-blue">Home</a>
-          <a href="#courses" className="hover:text-brand-blue flex items-center gap-1">Courses <ChevronRight className="size-3 rotate-90" /></a>
-          <a href="#services" className="hover:text-brand-blue">Development Services</a>
-          <a href="#pricing" className="hover:text-brand-blue">Pricing</a>
-          <a href="#about" className="hover:text-brand-blue">About</a>
-          <a href="#contact" className="hover:text-brand-blue">Contact</a>
-        </nav>
-        <div className="flex items-center gap-4">
-          <a href="#" className="hidden sm:inline text-sm font-medium hover:text-brand-blue">Log in</a>
-          <a href="#" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand text-white px-5 py-2.5 text-sm font-semibold shadow-soft hover:opacity-95 transition">
-            <Sparkles className="size-4" /> Get Started
-          </a>
-          <button className="lg:hidden"><Menu className="size-6" /></button>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 function FloatingIcon({ Icon, className }: { Icon: typeof BookOpen; className: string }) {
   return (
@@ -397,43 +367,6 @@ function CTA() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-foreground text-background py-14">
-      <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-4 gap-10">
-        <div>
-          <div className="flex items-center gap-3">
-            <div className="size-10 rounded-xl bg-gradient-brand grid place-items-center">
-              <BookOpen className="size-5 text-white" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg">Lumina Skill</div>
-              <div className="text-[10px] text-background/60 tracking-wide">Learn. Grow. Succeed.</div>
-            </div>
-          </div>
-          <p className="mt-5 text-sm text-background/70 leading-relaxed">Empowering learners worldwide with expert-led courses and industry-recognized certifications.</p>
-        </div>
-        {[
-          { h: "Platform", l: ["Courses", "Pricing", "Development Services", "Certificates"] },
-          { h: "Company", l: ["About", "Careers", "Press", "Contact"] },
-          { h: "Resources", l: ["Help Center", "Community", "Blog", "Terms & Privacy"] },
-        ].map((c) => (
-          <div key={c.h}>
-            <div className="font-semibold mb-4">{c.h}</div>
-            <ul className="space-y-2 text-sm text-background/70">
-              {c.l.map((i) => <li key={i}><a href="#" className="hover:text-background">{i}</a></li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-background/10 text-xs text-background/60 flex flex-wrap items-center justify-between gap-3">
-        <div>© 2026 Lumina Skill. All rights reserved.</div>
-        <div>Made with care for learners worldwide.</div>
-      </div>
-    </footer>
   );
 }
 
