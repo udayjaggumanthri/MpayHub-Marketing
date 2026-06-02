@@ -86,7 +86,7 @@ function AboutPage() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="rounded-3xl bg-gradient-brand text-white p-12 md:p-14 text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Sparkles className="size-3.5" /> Join us</div>
-            <h2 className="mt-5 text-3xl md:text-4xl font-bold">Want to teach with Lumina?</h2>
+            <h2 className="mt-5 text-3xl md:text-4xl font-bold">Want to teach with mPayHub?</h2>
             <p className="mt-3 text-white/90">We're always looking for working professionals who love to teach.</p>
             <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">Apply to teach <ArrowRight className="size-4" /></Link>
           </div>
