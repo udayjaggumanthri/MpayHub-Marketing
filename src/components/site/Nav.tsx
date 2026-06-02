@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { BookOpen, Sparkles, Menu, ChevronDown } from "lucide-react";
+import { Sparkles, Menu, ChevronDown } from "lucide-react";
+import logo from "@/assets/mpayhub-logo.png.asset.json";
 
 const linkCls = "hover:text-brand-blue transition-colors";
 
@@ -7,14 +8,8 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/60">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="size-11 rounded-xl bg-gradient-brand grid place-items-center shadow-soft">
-            <BookOpen className="size-5 text-white" />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display font-bold text-brand-teal text-lg">mPayHub</div>
-            <div className="text-[10px] text-muted-foreground tracking-wide">Learn. Grow. Succeed.</div>
-          </div>
+        <Link to="/" className="flex items-center" aria-label="mPayHub home">
+          <img src={logo.url} alt="mPayHub" className="h-14 md:h-16 w-auto object-contain" />
         </Link>
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-foreground/80">
           <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-brand-blue" }}>Home</Link>

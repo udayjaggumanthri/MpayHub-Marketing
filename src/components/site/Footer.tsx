@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { BookOpen } from "lucide-react";
+import logo from "@/assets/mpayhub-logo.png.asset.json";
 
 export function Footer() {
   const cols = [
@@ -11,16 +11,10 @@ export function Footer() {
     <footer className="bg-foreground text-background py-14">
       <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-4 gap-10">
         <div>
-          <Link to="/" className="flex items-center gap-3">
-            <div className="size-10 rounded-xl bg-gradient-brand grid place-items-center">
-              <BookOpen className="size-5 text-white" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg">mPayHub</div>
-              <div className="text-[10px] text-background/60 tracking-wide">Learn. Grow. Succeed.</div>
-            </div>
+          <Link to="/" className="inline-flex items-center bg-white rounded-xl p-3" aria-label="mPayHub home">
+            <img src={logo.url} alt="mPayHub" className="h-12 w-auto object-contain" />
           </Link>
-          <p className="mt-5 text-sm text-background/70 leading-relaxed">Empowering learners worldwide with expert-led courses and industry-recognized certifications.</p>
+          <p className="mt-5 text-sm text-background/70 leading-relaxed">Enterprise-grade learning and development services — engineered for ambitious teams.</p>
         </div>
         {cols.map((c) => (
           <div key={c.h}>
