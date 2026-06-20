@@ -1,19 +1,22 @@
-import { Sparkles } from "lucide-react";
-
-export function PageHeader({ eyebrow, title, highlight, description }: { eyebrow: string; title: string; highlight?: string; description: string }) {
+export function PageHeader({ eyebrow, title, highlight, description, index }: { eyebrow: string; title: string; highlight?: string; description: string; index?: string }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero border-b border-border/60">
-      <div className="absolute -top-20 -left-32 size-96 rounded-full bg-brand-teal/20 blur-3xl opacity-60" />
-      <div className="absolute -bottom-20 -right-32 size-[28rem] rounded-full bg-brand-blue/20 blur-3xl opacity-60" />
-      <div className="relative mx-auto max-w-5xl px-6 pt-20 pb-16 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-white/80 px-4 py-1.5 text-xs font-medium shadow-card">
-          <Sparkles className="size-3.5 text-brand-blue" />
-          <span className="text-muted-foreground">{eyebrow}</span>
+    <section className="relative bg-paper-warm border-b border-hairline">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-10 pt-24 pb-20">
+        <div className="grid lg:grid-cols-12 gap-10 items-end">
+          <div className="lg:col-span-8">
+            <div className="flex items-center gap-4">
+              <span className="text-[11px] tracking-[0.22em] uppercase text-gold font-medium">{index ?? "—"} </span>
+              <span className="h-px w-12 bg-gold" />
+              <span className="text-[11px] tracking-[0.22em] uppercase text-muted-foreground">{eyebrow}</span>
+            </div>
+            <h1 className="mt-8 font-display text-[3rem] md:text-[5.5rem] leading-[0.98] tracking-tight text-ink">
+              {title}{highlight && <> <span className="italic text-ink-soft">{highlight}</span></>}
+            </h1>
+          </div>
+          <div className="lg:col-span-4 lg:pl-10 lg:border-l border-hairline">
+            <p className="text-[16px] text-ink-soft leading-relaxed">{description}</p>
+          </div>
         </div>
-        <h1 className="mt-6 text-4xl md:text-6xl font-extrabold leading-[1.05]">
-          {title} {highlight && <span className="text-gradient-brand">{highlight}</span>}
-        </h1>
-        <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">{description}</p>
       </div>
     </section>
   );
