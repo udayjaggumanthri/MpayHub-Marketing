@@ -103,16 +103,16 @@ const services = [
 
 function Services() {
   return (
-    <section className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-16 sm:py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Service Overview</div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Comprehensive <span className="text-gradient-brand">Digital Payment Services</span></h2>
-          <p className="mt-4 text-muted-foreground">Access every major recharge, bill payment, banking, and financial service through a single platform — built for retailers, distributors and enterprises seeking efficient transaction management.</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Comprehensive <span className="text-gradient-brand">Digital Payment Services</span></h2>
+          <p className="mt-4 text-sm sm:text-base text-muted-foreground">Access every major recharge, bill payment, banking, and financial service through a single platform — built for retailers, distributors and enterprises seeking efficient transaction management.</p>
         </div>
-        <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="mt-10 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {services.map((s) => (
-            <div key={s.title} className="rounded-2xl bg-white p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center">
+            <div key={s.title} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center">
               <div className="mx-auto size-12 rounded-xl bg-gradient-brand grid place-items-center mb-3">
                 <s.icon className="size-5 text-white" />
               </div>
@@ -121,7 +121,7 @@ function Services() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 font-semibold hover:border-brand-blue transition shadow-card">
+          <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition shadow-card">
             View All Services <ArrowRight className="size-4" />
           </Link>
         </div>
@@ -139,22 +139,22 @@ const partnerTiers = [
 
 function PartnerEcosystem() {
   return (
-    <section className="py-24 bg-gradient-hero">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-16 sm:py-24 bg-gradient-hero">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div>
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Partner Ecosystem</div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold leading-tight">A <span className="text-gradient-brand">Partner-First</span> Fintech Platform</h2>
-          <p className="mt-5 text-muted-foreground leading-relaxed">We are opening early access to retailers, distributors and business partners who want to build a digital financial services business with us from the ground up. Our partnership models are designed for sustainable, transparent growth — whether you are launching a single outlet or a regional distribution network.</p>
-          <Link to="/pricing" className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-7 py-3.5 font-semibold shadow-soft hover:bg-brand-blue transition">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">A <span className="text-gradient-brand">Partner-First</span> Fintech Platform</h2>
+          <p className="mt-5 text-sm sm:text-base text-muted-foreground leading-relaxed">We are opening early access to retailers, distributors and business partners who want to build a digital financial services business with us from the ground up. Our partnership models are designed for sustainable, transparent growth — whether you are launching a single outlet or a regional distribution network.</p>
+          <Link to="/pricing" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
             See Partner Plans <ArrowRight className="size-4" />
           </Link>
         </div>
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
           {partnerTiers.map((p) => (
-            <div key={p.name} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card">
+            <div key={p.name} className="rounded-2xl bg-white p-4 sm:p-6 border border-border/60 shadow-card min-w-0">
               <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">{p.tag}</div>
-              <div className="mt-2 text-xl font-bold">{p.name}</div>
-              <div className="mt-3 text-2xl font-bold text-gradient-brand">{p.income}</div>
+              <div className="mt-2 text-lg sm:text-xl font-bold">{p.name}</div>
+              <div className="mt-3 text-base sm:text-xl font-bold text-gradient-brand leading-snug">{p.income}</div>
               <div className="mt-1 text-xs text-muted-foreground">Designed for</div>
             </div>
           ))}
