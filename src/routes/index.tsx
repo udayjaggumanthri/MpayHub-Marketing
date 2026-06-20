@@ -50,9 +50,9 @@ function Hero() {
             mPayHub is an emerging fintech platform unifying recharge, bill payments, banking and digital financial services. We are onboarding our founding partners — retailers, distributors and enterprises — who want to grow with a modern, secure and transparent payment infrastructure from day one.
           </p>
           <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-            <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
+            <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
               Become a Founding Partner <ArrowRight className="size-4" />
-            </Link>
+            </a>
             <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition">
               Explore Services
             </Link>
@@ -211,9 +211,9 @@ function GrowthCTA() {
                 We are a new fintech venture setting out to build a transparent, reliable payment infrastructure for India's businesses. We do not claim decades of legacy — instead, we bring a dedicated team, clear milestones, robust technology, and an unwavering commitment to earning your trust from the very first transaction.
               </p>
               <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-                <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">
+                <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">
                   Join Early Access <ArrowRight className="size-4" />
-                </Link>
+                </a>
                 <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/10 transition">
                   Talk to Our Team
                 </Link>

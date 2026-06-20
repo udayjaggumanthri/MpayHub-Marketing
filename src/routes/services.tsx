@@ -93,7 +93,7 @@ function ServicesPage() {
           <div className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Activate every service from one dashboard</h2>
             <p className="mt-3 text-sm sm:text-base text-white/90">Onboard quickly, complete KYC and start transacting across recharge, BBPS, AEPS and banking services.</p>
-            <Link to="/signup" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Start onboarding <ArrowRight className="size-4" /></Link>
+            <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Start onboarding <ArrowRight className="size-4" /></a>
           </div>
         </div>
       </section>

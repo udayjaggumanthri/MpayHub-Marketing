@@ -102,7 +102,11 @@ function PartnersPage() {
                     <li key={f} className="flex gap-2"><Check className="size-4 text-brand-teal flex-shrink-0 mt-0.5" /> <span>{f}</span></li>
                   ))}
                 </ul>
-                <Link to={t.cta === "Talk to Sales" ? "/contact" : "/signup"} className={`mt-6 w-full text-center rounded-xl py-3 font-semibold transition ${t.popular ? "bg-gradient-brand text-white hover:opacity-95" : "bg-muted hover:bg-brand-blue hover:text-white"}`}>{t.cta}</Link>
+                {t.cta === "Talk to Sales" ? (
+                  <Link to="/contact" className={`mt-6 w-full text-center rounded-xl py-3 font-semibold transition ${t.popular ? "bg-gradient-brand text-white hover:opacity-95" : "bg-muted hover:bg-brand-blue hover:text-white"}`}>{t.cta}</Link>
+                ) : (
+                  <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className={`mt-6 w-full text-center rounded-xl py-3 font-semibold transition ${t.popular ? "bg-gradient-brand text-white hover:opacity-95" : "bg-muted hover:bg-brand-blue hover:text-white"}`}>{t.cta}</a>
+                )}
               </div>
             ))}
           </div>
@@ -151,7 +155,7 @@ function PartnersPage() {
           <div className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Ready to launch your fintech business?</h2>
             <p className="mt-3 text-sm sm:text-base text-white/90">Register today and start earning recurring revenue with India's growing digital payment ecosystem.</p>
-            <Link to="/signup" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Become a Partner <ArrowRight className="size-4" /></Link>
+            <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Become a Partner <ArrowRight className="size-4" /></a>
           </div>
         </div>
       </section>

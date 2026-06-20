@@ -74,9 +74,9 @@ function CoursesPage() {
                       <div className="text-xl font-bold text-brand-blue">{c.price}</div>
                       <div className="text-xs text-muted-foreground line-through">{c.old}</div>
                     </div>
-                    <Link to="/signup" className="inline-flex items-center gap-1.5 bg-gradient-brand text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-95">
+                    <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-gradient-brand text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-95">
                       Enroll <ArrowRight className="size-3.5" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
