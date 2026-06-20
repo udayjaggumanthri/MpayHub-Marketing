@@ -175,13 +175,13 @@ const reasons = [
 
 function Trust() {
   return (
-    <section className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-16 sm:py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Trust & Reliability</div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold">Why Businesses <span className="text-gradient-brand">Trust Us</span></h2>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Why Businesses <span className="text-gradient-brand">Trust Us</span></h2>
         </div>
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map((r) => (
             <div key={r.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
               <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4">
@@ -199,35 +199,35 @@ function Trust() {
 
 function GrowthCTA() {
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-brand text-white p-12 md:p-16">
+    <section className="py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-brand text-white p-6 sm:p-12 md:p-16">
           <div className="absolute -top-20 -right-20 size-72 rounded-full bg-white/10 blur-3xl" />
-          <div className="relative grid md:grid-cols-2 gap-10 items-center">
+          <div className="relative grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Globe className="size-3.5" /> Building Together</div>
-              <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">An Emerging Platform with <span className="opacity-90">Real Ambition</span></h2>
-              <p className="mt-4 text-white/90 leading-relaxed">
+              <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">An Emerging Platform with <span className="opacity-90">Real Ambition</span></h2>
+              <p className="mt-4 text-sm sm:text-base text-white/90 leading-relaxed">
                 We are a new fintech venture setting out to build a transparent, reliable payment infrastructure for India's businesses. We do not claim decades of legacy — instead, we bring a dedicated team, clear milestones, robust technology, and an unwavering commitment to earning your trust from the very first transaction.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">
+              <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
+                <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">
                   Join Early Access <ArrowRight className="size-4" />
                 </Link>
-                <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-semibold hover:bg-white/10 transition">
+                <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/10 transition">
                   Talk to Our Team
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {[
                 ["100", "Initial Partner Cohort"],
                 ["10,000+", "Target Daily Transactions"],
                 ["99.5%", "Uptime Commitment"],
                 ["Zero", "Hidden Platform Fees"],
               ].map(([v, l]) => (
-                <div key={l} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-5">
-                  <div className="text-3xl font-bold">{v}</div>
+                <div key={l} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-4 sm:p-5 min-w-0">
+                  <div className="text-2xl sm:text-3xl font-bold truncate">{v}</div>
                   <div className="mt-1 text-xs uppercase tracking-wider text-white/80">{l}</div>
                 </div>
               ))}
