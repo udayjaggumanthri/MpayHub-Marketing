@@ -37,36 +37,36 @@ function AboutPage() {
       <Nav />
       <PageHeader eyebrow="Company Overview" title="Driving Financial Inclusion" highlight="Through Technology" description="We are a technology-driven fintech company focused on delivering reliable digital payment and banking solutions to businesses across India." />
 
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-6">
-          <div className="rounded-3xl bg-white p-9 border border-border/60 shadow-card">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 grid md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="rounded-3xl bg-white p-6 sm:p-9 border border-border/60 shadow-card">
             <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center"><Target className="size-5 text-white" /></div>
-            <h2 className="mt-5 text-2xl font-bold">Our Mission</h2>
-            <p className="mt-3 text-muted-foreground leading-relaxed">To simplify access to digital financial services while enabling businesses to grow through secure, efficient and innovative payment solutions.</p>
+            <h2 className="mt-5 text-xl sm:text-2xl font-bold">Our Mission</h2>
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">To simplify access to digital financial services while enabling businesses to grow through secure, efficient and innovative payment solutions.</p>
           </div>
-          <div className="rounded-3xl bg-white p-9 border border-border/60 shadow-card">
+          <div className="rounded-3xl bg-white p-6 sm:p-9 border border-border/60 shadow-card">
             <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center"><Eye className="size-5 text-white" /></div>
-            <h2 className="mt-5 text-2xl font-bold">Our Vision</h2>
-            <p className="mt-3 text-muted-foreground leading-relaxed">To become a leading digital financial services platform that connects businesses, consumers and communities through accessible and technology-driven payment infrastructure.</p>
+            <h2 className="mt-5 text-xl sm:text-2xl font-bold">Our Vision</h2>
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">To become a leading digital financial services platform that connects businesses, consumers and communities through accessible and technology-driven payment infrastructure.</p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-muted/40">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="py-16 sm:py-20 bg-muted/40">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="text-center">
             <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Our Growth Journey</div>
-            <h2 className="mt-3 text-4xl font-bold">Milestones that <span className="text-gradient-brand">shape us</span></h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Milestones that <span className="text-gradient-brand">shape us</span></h2>
           </div>
-          <div className="mt-14 relative">
+          <div className="mt-10 sm:mt-14 relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {journey.map(([t, d], i) => (
                 <div key={t} className={`relative md:grid md:grid-cols-2 md:gap-10 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-                  <div className={`pl-12 md:pl-0 ${i % 2 ? "md:text-left md:pl-12" : "md:text-right md:pr-12"}`}>
-                    <div className="rounded-2xl bg-white p-6 border border-border/60 shadow-card inline-block">
+                  <div className={`pl-10 md:pl-0 ${i % 2 ? "md:text-left md:pl-12" : "md:text-right md:pr-12"}`}>
+                    <div className="rounded-2xl bg-white p-5 sm:p-6 border border-border/60 shadow-card inline-block max-w-full">
                       <div className="text-xs font-bold text-brand-blue uppercase tracking-wider">Stage 0{i + 1}</div>
-                      <div className="mt-1 text-xl font-bold">{t}</div>
+                      <div className="mt-1 text-lg sm:text-xl font-bold">{t}</div>
                       <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d}</p>
                     </div>
                   </div>
@@ -79,13 +79,13 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
             <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Our Core Values</div>
-            <h2 className="mt-3 text-4xl font-bold">Principles that <span className="text-gradient-brand">guide us</span></h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Principles that <span className="text-gradient-brand">guide us</span></h2>
           </div>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {values.map((v) => (
               <div key={v.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card">
                 <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4"><v.icon className="size-5 text-white" /></div>
@@ -97,21 +97,21 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/40">
-        <div className="mx-auto max-w-5xl px-6 text-center">
+      <section className="py-16 sm:py-20 bg-muted/40">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Leadership & Governance</div>
-          <h2 className="mt-3 text-4xl font-bold">Built by experts in <span className="text-gradient-brand">fintech</span></h2>
-          <p className="mt-5 text-muted-foreground leading-relaxed max-w-3xl mx-auto">Our leadership team combines expertise in financial technology, operations, compliance and customer success. Together, we are committed to building trusted fintech infrastructure that drives growth for businesses of all sizes.</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Built by experts in <span className="text-gradient-brand">fintech</span></h2>
+          <p className="mt-5 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">Our leadership team combines expertise in financial technology, operations, compliance and customer success. Together, we are committed to building trusted fintech infrastructure that drives growth for businesses of all sizes.</p>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="rounded-3xl bg-gradient-brand text-white p-12 md:p-14 text-center">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Sparkles className="size-3.5" /> Partner with us</div>
-            <h2 className="mt-5 text-3xl md:text-4xl font-bold">Ready to grow with mPayHub?</h2>
-            <p className="mt-3 text-white/90">Be among the founding partners shaping a new digital payments network in India.</p>
-            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">Talk to our team <ArrowRight className="size-4" /></Link>
+            <h2 className="mt-5 text-2xl sm:text-3xl md:text-4xl font-bold">Ready to grow with mPayHub?</h2>
+            <p className="mt-3 text-sm sm:text-base text-white/90">Be among the founding partners shaping a new digital payments network in India.</p>
+            <Link to="/contact" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Talk to our team <ArrowRight className="size-4" /></Link>
           </div>
         </div>
       </section>

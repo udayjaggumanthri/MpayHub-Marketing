@@ -66,18 +66,18 @@ function ServicesPage() {
       <PageHeader eyebrow="Our Services" title="One Platform." highlight="Every Service." description="All major recharge, banking and bill payment services on one platform. Fast, secure and reliable — built for retailers, distributors and enterprises." />
 
       {groups.map((g, gi) => (
-        <section key={g.title} className={`py-16 ${gi % 2 ? "bg-muted/40" : ""}`}>
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="flex items-end justify-between flex-wrap gap-4">
+        <section key={g.title} className={`py-12 sm:py-16 ${gi % 2 ? "bg-muted/40" : ""}`}>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="flex items-end justify-between flex-wrap gap-3 sm:gap-4">
               <div>
                 <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Category</div>
-                <h2 className="mt-2 text-3xl md:text-4xl font-bold">{g.title}</h2>
+                <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold">{g.title}</h2>
               </div>
               <div className="text-sm text-muted-foreground">{g.items.length} services</div>
             </div>
-            <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="mt-8 sm:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {g.items.map((s) => (
-                <div key={s.title} className="rounded-2xl bg-white p-7 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all">
+                <div key={s.title} className="rounded-2xl bg-white p-5 sm:p-7 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all">
                   <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4"><s.icon className="size-5 text-white" /></div>
                   <h3 className="font-bold text-lg">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
@@ -88,12 +88,12 @@ function ServicesPage() {
         </section>
       ))}
 
-      <section className="py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="rounded-3xl bg-gradient-brand text-white p-12 md:p-14 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Activate every service from one dashboard</h2>
-            <p className="mt-3 text-white/90">Onboard quickly, complete KYC and start transacting across recharge, BBPS, AEPS and banking services.</p>
-            <Link to="/signup" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">Start onboarding <ArrowRight className="size-4" /></Link>
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Activate every service from one dashboard</h2>
+            <p className="mt-3 text-sm sm:text-base text-white/90">Onboard quickly, complete KYC and start transacting across recharge, BBPS, AEPS and banking services.</p>
+            <Link to="/signup" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Start onboarding <ArrowRight className="size-4" /></Link>
           </div>
         </div>
       </section>

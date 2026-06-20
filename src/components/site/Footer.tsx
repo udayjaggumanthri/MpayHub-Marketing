@@ -8,11 +8,11 @@ export function Footer() {
     { h: "Resources", l: [["Help Center", "/contact"], ["Onboarding", "/signup"], ["Partner Login", "/login"], ["Terms & Privacy", "/about"]] as const },
   ];
   return (
-    <footer className="bg-foreground text-background py-14">
-      <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-4 gap-10">
-        <div>
-          <Link to="/" className="inline-flex items-center bg-white rounded-xl p-3" aria-label="mPayHub home">
-            <img src={logo.url} alt="mPayHub" className="h-12 w-auto object-contain" />
+    <footer className="bg-foreground text-background py-12 sm:py-14">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <div className="col-span-2 md:col-span-1">
+          <Link to="/" className="inline-flex items-center bg-white rounded-xl p-2 sm:p-3" aria-label="mPayHub home">
+            <img src={logo.url} alt="mPayHub" className="h-10 sm:h-12 w-auto object-contain" />
           </Link>
           <p className="mt-5 text-sm text-background/70 leading-relaxed">Secure digital payment infrastructure for retailers, distributors and enterprises across India.</p>
         </div>
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-background/10 text-xs text-background/60 flex flex-wrap items-center justify-between gap-3">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-10 sm:mt-12 pt-6 border-t border-background/10 text-xs text-background/60 flex flex-wrap items-center justify-between gap-3">
         <div>© 2026 mPayHub. All rights reserved.</div>
         <div>Building India's fintech infrastructure.</div>
       </div>
