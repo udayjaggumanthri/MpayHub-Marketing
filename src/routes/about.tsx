@@ -2,126 +2,116 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { PageHeader } from "@/components/site/PageHeader";
-import { ShieldCheck, Lightbulb, HeartHandshake, Activity, ArrowUpRight } from "lucide-react";
+import { ShieldCheck, Lightbulb, HeartHandshake, Activity, ArrowRight, Sparkles, Target, Eye } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Company — mPayHub" },
-      { name: "description", content: "mPayHub is an India-built fintech operating system advancing financial inclusion through engineered trust, modern infrastructure and a partner-first model." },
-      { property: "og:title", content: "Company — mPayHub" },
-      { property: "og:description", content: "Engineering the financial backbone for India's next generation of enterprises." },
+      { title: "About — mPayHub" },
+      { name: "description", content: "mPayHub is a technology-driven fintech company delivering reliable digital payment and banking solutions to businesses across India." },
+      { property: "og:title", content: "About — mPayHub" },
+      { property: "og:description", content: "Driving financial inclusion through technology." },
     ],
   }),
   component: AboutPage,
 });
 
 const journey = [
-  ["Foundation", "Established with a clear thesis: India's merchants and distributors deserve institutional-grade payment infrastructure, not legacy compromises."],
-  ["Platform", "Architected a unified core for recharge, BBPS, AEPS, money transfer, identity and API banking — engineered for high concurrency and audit-grade traceability."],
-  ["Network", "Opened a structured partner ladder — Retailer, Distributor, Master and Super Distributor — with transparent economics and tiered support."],
-  ["Intelligence", "Deployed real-time reporting, settlement and reconciliation systems to give every partner the operational clarity a CFO would expect."],
-  ["The next chapter", "Onboarding our founding cohort, scaling regional coverage and extending the platform into deeper enterprise-grade financial services."],
+  ["Foundation", "Established with a vision to simplify digital financial services and empower local businesses."],
+  ["Expansion", "Introduced recharge, bill payment and banking services to support growing customer needs."],
+  ["Network Growth", "Expanded our partner ecosystem across multiple regions through retailer and distributor programs."],
+  ["Technology Advancement", "Enhanced platform capabilities through API banking, automation, analytics and enterprise-grade security."],
+  ["Future Ready", "Continuing to innovate and build scalable financial technology solutions for businesses nationwide."],
 ];
 
 const values = [
-  { icon: ShieldCheck, title: "Custodial trust", desc: "We treat every transaction as institutional capital — secured, reconciled and auditable end-to-end." },
-  { icon: Lightbulb, title: "Engineered clarity", desc: "Plain economics, observable systems and transparent operations. No hidden fees, no opaque rails." },
-  { icon: HeartHandshake, title: "Partner-first", desc: "Our partners are not customers of a product. They are operators on a shared platform we are building together." },
-  { icon: Activity, title: "Operational rigour", desc: "Reliability is a posture, not a promise. We monitor, measure and improve every quarter, in public." },
+  { icon: ShieldCheck, title: "Security", desc: "Protecting transactions, customer data and business operations through robust security standards." },
+  { icon: Lightbulb, title: "Innovation", desc: "Continuously improving technology and introducing new financial service opportunities." },
+  { icon: HeartHandshake, title: "Customer Success", desc: "Supporting partners with the tools, training and resources needed to achieve sustainable growth." },
+  { icon: Activity, title: "Reliability", desc: "Delivering consistent performance and dependable transaction processing." },
 ];
 
 function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <PageHeader
-        index="06"
-        eyebrow="Company"
-        title="Building the financial backbone"
-        highlight="of modern India."
-        description="mPayHub is a technology-first fintech company engineering the unified payments and banking layer that India's merchants, distributors and enterprises have long deserved."
-      />
+      <PageHeader eyebrow="Company Overview" title="Driving Financial Inclusion" highlight="Through Technology" description="We are a technology-driven fintech company focused on delivering reliable digital payment and banking solutions to businesses across India." />
 
-      <section className="bg-paper py-24">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-6 lg:pr-12 lg:border-r border-hairline">
-            <div className="text-[11px] tracking-[0.22em] uppercase text-gold">Our Mission</div>
-            <p className="mt-6 font-display text-3xl md:text-4xl leading-tight tracking-tight">
-              To make institutional-grade financial infrastructure <span className="italic text-ink-soft">accessible to every business</span> — from the street-corner counter to the regional distributor.
-            </p>
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-6">
+          <div className="rounded-3xl bg-white p-9 border border-border/60 shadow-card">
+            <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center"><Target className="size-5 text-white" /></div>
+            <h2 className="mt-5 text-2xl font-bold">Our Mission</h2>
+            <p className="mt-3 text-muted-foreground leading-relaxed">To simplify access to digital financial services while enabling businesses to grow through secure, efficient and innovative payment solutions.</p>
           </div>
-          <div className="lg:col-span-6 lg:pl-12">
-            <div className="text-[11px] tracking-[0.22em] uppercase text-gold">Our Vision</div>
-            <p className="mt-6 font-display text-3xl md:text-4xl leading-tight tracking-tight">
-              A connected India where every merchant operates on the same rails as the country's largest banks — <span className="italic text-ink-soft">secure, settled and observable in real time.</span>
-            </p>
+          <div className="rounded-3xl bg-white p-9 border border-border/60 shadow-card">
+            <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center"><Eye className="size-5 text-white" /></div>
+            <h2 className="mt-5 text-2xl font-bold">Our Vision</h2>
+            <p className="mt-3 text-muted-foreground leading-relaxed">To become a leading digital financial services platform that connects businesses, consumers and communities through accessible and technology-driven payment infrastructure.</p>
           </div>
         </div>
       </section>
 
-      <section className="bg-paper-warm border-y border-hairline py-24">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="grid lg:grid-cols-12 gap-10 mb-16 items-end">
-            <div className="lg:col-span-7">
-              <div className="text-[11px] tracking-[0.22em] uppercase text-muted-foreground">— Trajectory</div>
-              <h2 className="mt-6 font-display text-4xl md:text-6xl tracking-tight leading-[1.02]">
-                A deliberate <span className="italic text-ink-soft">build sequence.</span>
-              </h2>
-            </div>
-            <div className="lg:col-span-5">
-              <p className="text-ink-soft leading-relaxed">A chronological account of how mPayHub is being built — disciplined, capital-efficient and aligned to the long arc of financial infrastructure.</p>
-            </div>
+      <section className="py-20 bg-muted/40">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="text-center">
+            <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Our Growth Journey</div>
+            <h2 className="mt-3 text-4xl font-bold">Milestones that <span className="text-gradient-brand">shape us</span></h2>
           </div>
-          <ol className="border-t border-hairline">
-            {journey.map(([t, d], i) => (
-              <li key={t} className="grid grid-cols-12 gap-6 py-8 border-b border-hairline">
-                <div className="col-span-2 md:col-span-1 font-display text-2xl text-gold">{String(i + 1).padStart(2, "0")}</div>
-                <div className="col-span-10 md:col-span-4">
-                  <div className="font-display text-2xl tracking-tight">{t}</div>
+          <div className="mt-14 relative">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
+            <div className="space-y-8">
+              {journey.map(([t, d], i) => (
+                <div key={t} className={`relative md:grid md:grid-cols-2 md:gap-10 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
+                  <div className={`pl-12 md:pl-0 ${i % 2 ? "md:text-left md:pl-12" : "md:text-right md:pr-12"}`}>
+                    <div className="rounded-2xl bg-white p-6 border border-border/60 shadow-card inline-block">
+                      <div className="text-xs font-bold text-brand-blue uppercase tracking-wider">Stage 0{i + 1}</div>
+                      <div className="mt-1 text-xl font-bold">{t}</div>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d}</p>
+                    </div>
+                  </div>
+                  <div className="hidden md:block" />
+                  <div className="absolute left-4 md:left-1/2 top-6 size-3 rounded-full bg-brand-blue ring-4 ring-background md:-translate-x-1/2" />
                 </div>
-                <div className="col-span-12 md:col-span-7 text-[15px] text-ink-soft leading-relaxed md:pl-6 md:border-l border-hairline">{d}</div>
-              </li>
-            ))}
-          </ol>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="bg-paper py-24">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
-            <div className="lg:col-span-7">
-              <div className="text-[11px] tracking-[0.22em] uppercase text-muted-foreground">— Operating Principles</div>
-              <h2 className="mt-6 font-display text-4xl md:text-6xl tracking-tight leading-[1.02]">
-                Four convictions <span className="italic text-ink-soft">that govern the firm.</span>
-              </h2>
-            </div>
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Our Core Values</div>
+            <h2 className="mt-3 text-4xl font-bold">Principles that <span className="text-gradient-brand">guide us</span></h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 border-t border-hairline">
-            {values.map((v, i) => (
-              <div key={v.title} className={`p-8 border-b border-hairline ${i % 4 !== 3 ? "lg:border-r" : ""} ${i % 2 !== 1 ? "md:border-r" : ""}`}>
-                <v.icon className="size-5 text-ink" strokeWidth={1.4} />
-                <h3 className="mt-8 font-display text-2xl tracking-tight">{v.title}</h3>
-                <p className="mt-3 text-[14.5px] text-ink-soft leading-relaxed">{v.desc}</p>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {values.map((v) => (
+              <div key={v.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card">
+                <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4"><v.icon className="size-5 text-white" /></div>
+                <h3 className="font-bold text-lg">{v.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-ink text-paper">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10 py-24 grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8">
-            <div className="text-[11px] tracking-[0.22em] uppercase text-gold-soft">— Partner With Us</div>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl tracking-tight leading-[1.02]">
-              Help us shape the financial <span className="italic text-gold-soft">backbone of India.</span>
-            </h2>
-            <p className="mt-6 text-paper/75 max-w-2xl leading-relaxed">A small, deliberate cohort of founding partners will define how mPayHub serves the next million merchants. If your business shares our standard, we would like to speak.</p>
-          </div>
-          <div className="lg:col-span-4 flex lg:justify-end">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-paper text-ink px-6 py-3.5 text-sm font-medium hover:bg-gold-soft transition rounded-sm">
-              Speak with leadership <ArrowUpRight className="size-3.5" />
-            </Link>
+      <section className="py-20 bg-muted/40">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Leadership & Governance</div>
+          <h2 className="mt-3 text-4xl font-bold">Built by experts in <span className="text-gradient-brand">fintech</span></h2>
+          <p className="mt-5 text-muted-foreground leading-relaxed max-w-3xl mx-auto">Our leadership team combines expertise in financial technology, operations, compliance and customer success. Together, we are committed to building trusted fintech infrastructure that drives growth for businesses of all sizes.</p>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="rounded-3xl bg-gradient-brand text-white p-12 md:p-14 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Sparkles className="size-3.5" /> Partner with us</div>
+            <h2 className="mt-5 text-3xl md:text-4xl font-bold">Ready to grow with mPayHub?</h2>
+            <p className="mt-3 text-white/90">Be among the founding partners shaping a new digital payments network in India.</p>
+            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">Talk to our team <ArrowRight className="size-4" /></Link>
           </div>
         </div>
       </section>
