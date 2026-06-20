@@ -76,24 +76,24 @@ function ContactPage() {
               </Reveal>
             ))}
           </div>
-          <Reveal as="form" delay={120} className="lg:col-span-3 rounded-2xl bg-white p-5 sm:p-8 border border-border/60 shadow-card space-y-4 h-fit" style={{}}>
-            {/* @ts-expect-error - form via Reveal */}
-            <></>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Field label="Full name" name="name" />
-              <Field label="Business name" name="business" />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Field label="Email" name="email" type="email" />
-              <Field label="Phone" name="phone" type="tel" />
-            </div>
-            <div>
-              <label className="text-sm font-medium">Message</label>
-              <textarea name="message" required rows={5} className="mt-1.5 w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue" />
-            </div>
-            <button disabled={sending} className="inline-flex items-center gap-2 rounded-full bg-gradient-brand text-white px-6 py-3 font-semibold shadow-soft hover:opacity-95 disabled:opacity-60 transition">
-              {sending ? "Sending..." : <>Send message <Send className="size-4" /></>}
-            </button>
+          <Reveal delay={120} className="lg:col-span-3 h-fit">
+            <form onSubmit={onSubmit} className="rounded-2xl bg-white p-5 sm:p-8 border border-border/60 shadow-card space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="Full name" name="name" />
+                <Field label="Business name" name="business" />
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="Email" name="email" type="email" />
+                <Field label="Phone" name="phone" type="tel" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">Message</label>
+                <textarea name="message" required rows={5} className="mt-1.5 w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue" />
+              </div>
+              <button disabled={sending} className="inline-flex items-center gap-2 rounded-full bg-gradient-brand text-white px-6 py-3 font-semibold shadow-soft hover:opacity-95 disabled:opacity-60 transition">
+                {sending ? "Sending..." : <>Send message <Send className="size-4" /></>}
+              </button>
+            </form>
           </Reveal>
         </div>
       </section>
