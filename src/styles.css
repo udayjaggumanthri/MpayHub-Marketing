@@ -172,18 +172,18 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
+    font-weight: 400;
   }
 }
 
 @utility text-gradient-brand {
-  background-image: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  font-style: italic;
+  color: var(--ink);
 }
 @utility bg-gradient-hero {
   background-image: var(--gradient-hero);
@@ -196,4 +196,16 @@
 }
 @utility shadow-card {
   box-shadow: var(--shadow-card);
+}
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+@utility rule {
+  height: 1px;
+  background-color: var(--hairline);
 }
