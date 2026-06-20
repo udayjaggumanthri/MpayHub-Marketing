@@ -62,39 +62,57 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-blue-deep: var(--brand-blue-deep);
   --color-brand-teal: var(--brand-teal);
-  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-hairline: var(--hairline);
+  --font-display: "Instrument Serif", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.15 0.02 250);
+  --radius: 0.375rem;
+  /* Paper & ink palette */
+  --paper: oklch(0.985 0.006 85);          /* warm ivory */
+  --paper-warm: oklch(0.965 0.012 80);     /* slightly deeper ivory */
+  --ink: oklch(0.18 0.03 255);             /* deep midnight navy */
+  --ink-soft: oklch(0.38 0.025 255);
+  --gold: oklch(0.72 0.11 75);             /* refined champagne */
+  --gold-soft: oklch(0.86 0.06 80);
+
+  --background: var(--paper);
+  --foreground: var(--ink);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 250);
+  --card-foreground: var(--ink);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 250);
-  --primary: oklch(0.55 0.22 258);
-  --primary-foreground: oklch(0.99 0.005 250);
-  --secondary: oklch(0.28 0.12 268);
-  --secondary-foreground: oklch(0.99 0.005 250);
-  --muted: oklch(0.97 0.01 240);
-  --muted-foreground: oklch(0.5 0.02 250);
-  --accent: oklch(0.95 0.04 258);
-  --accent-foreground: oklch(0.28 0.12 268);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.92 0.015 258);
-  --input: oklch(0.92 0.015 258);
-  --ring: oklch(0.55 0.22 258);
-  --brand-blue: oklch(0.55 0.22 258);
-  --brand-blue-deep: oklch(0.28 0.12 268);
-  --brand-teal: oklch(0.62 0.2 255);
-  --gradient-hero: linear-gradient(135deg, oklch(0.97 0.025 258) 0%, oklch(0.99 0.005 250) 50%, oklch(0.94 0.05 262) 100%);
-  --gradient-brand: linear-gradient(135deg, var(--brand-blue-deep), var(--brand-blue));
-  --gradient-text: linear-gradient(135deg, oklch(0.32 0.14 268), oklch(0.55 0.22 258));
-  --shadow-soft: 0 10px 40px -10px oklch(0.55 0.22 258 / 0.25);
-  --shadow-card: 0 4px 20px -4px oklch(0.28 0.12 268 / 0.12);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-warm);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.955 0.008 80);
+  --muted-foreground: oklch(0.48 0.02 255);
+  --accent: var(--gold);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.88 0.01 80);
+  --input: oklch(0.9 0.01 80);
+  --ring: var(--ink);
+  /* legacy brand aliases kept for any leftover refs */
+  --brand-blue: var(--ink);
+  --brand-blue-deep: var(--ink);
+  --brand-teal: var(--gold);
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.98 0.012 80) 0%, var(--paper) 60%);
+  --gradient-brand: linear-gradient(135deg, oklch(0.14 0.03 255) 0%, oklch(0.22 0.04 255) 100%);
+  --gradient-text: linear-gradient(180deg, var(--ink) 0%, oklch(0.3 0.035 255) 100%);
+  --shadow-soft: 0 1px 0 oklch(0.18 0.03 255 / 0.04), 0 20px 50px -28px oklch(0.18 0.03 255 / 0.18);
+  --shadow-card: 0 1px 0 oklch(0.18 0.03 255 / 0.04), 0 1px 2px oklch(0.18 0.03 255 / 0.04);
+  --hairline: oklch(0.85 0.01 80);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -155,18 +173,18 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
+    font-weight: 400;
   }
 }
 
 @utility text-gradient-brand {
-  background-image: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  font-style: italic;
+  color: var(--ink);
 }
 @utility bg-gradient-hero {
   background-image: var(--gradient-hero);
@@ -179,4 +197,16 @@
 }
 @utility shadow-card {
   box-shadow: var(--shadow-card);
+}
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+@utility rule {
+  height: 1px;
+  background-color: var(--hairline);
 }
