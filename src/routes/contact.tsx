@@ -19,11 +19,11 @@ export const Route = createFileRoute("/contact")({
 });
 
 const channels = [
-  { icon: Briefcase, label: "Business Inquiries", value: "sales@mpayhub.com", note: "Sales & partnership team" },
-  { icon: MessageCircle, label: "WhatsApp Support", value: "+91 90000 00000", note: "Onboarding & quick help" },
-  { icon: Mail, label: "Email Support", value: "support@mpayhub.com", note: "Technical & account help" },
-  { icon: Phone, label: "Phone Support", value: "+91 80 4567 8900", note: "Speak with a specialist" },
-  { icon: MapPin, label: "Office Location", value: "Bangalore, India", note: "Business meetings & demos" },
+  { icon: Briefcase, label: "Business Inquiries", value: "contact@prajnadharaedu.com", note: "Sales & partnership team" },
+  { icon: MessageCircle, label: "WhatsApp Support", value: "(+91) 9052513888", note: "Onboarding & quick help" },
+  { icon: Mail, label: "Email Support", value: "contact@prajnadharaedu.com", note: "Technical & account help" },
+  { icon: Phone, label: "Phone Support", value: "(+91) 9052513888", note: "Speak with a specialist" },
+  { icon: MapPin, label: "Office Location", value: "1st Floor, 7-28-6, Tanvi Castle, Tyaga Raja Nagar, Rajahmundry, East Godavari, Andhra Pradesh, 533101", note: "Business meetings & demos" },
 ];
 
 const faqs = [
@@ -83,17 +83,6 @@ function ContactPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Field label="Email" name="email" type="email" />
               <Field label="Phone" name="phone" type="tel" />
-            </div>
-            <div>
-              <label className="text-sm font-medium">I'm interested in</label>
-              <select name="interest" required className="mt-1.5 w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue">
-                <option value="">Select an option</option>
-                <option>Becoming a Partner</option>
-                <option>API Banking Integration</option>
-                <option>Payment Gateway</option>
-                <option>Enterprise Solutions</option>
-                <option>General Inquiry</option>
-              </select>
             </div>
             <div>
               <label className="text-sm font-medium">Message</label>
