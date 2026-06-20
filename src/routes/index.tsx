@@ -35,31 +35,31 @@ function Hero() {
         <div className="absolute -top-20 -left-32 size-96 rounded-full bg-brand-teal/20 blur-3xl" />
         <div className="absolute -bottom-20 -right-32 size-[28rem] rounded-full bg-brand-blue/20 blur-3xl" />
       </div>
-      <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-24 grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-white/80 px-4 py-1.5 text-xs font-medium shadow-card">
+          <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
             <Sparkles className="size-3.5 text-brand-blue" />
             <span className="rounded-full bg-brand-blue/10 px-2 py-0.5 text-brand-blue font-semibold">Now Launching</span>
-            <span className="text-muted-foreground">A new fintech platform built for India's next wave of partners</span>
+            <span className="text-muted-foreground">A new fintech platform for India's next wave of partners</span>
           </div>
-          <h1 className="mt-6 text-4xl md:text-6xl font-extrabold leading-[1.05] text-foreground">
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
             Digital Payment Solutions for{" "}
             <span className="text-gradient-brand">Growing Businesses</span>
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+          <p className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
             mPayHub is an emerging fintech platform unifying recharge, bill payments, banking and digital financial services. We are onboarding our founding partners — retailers, distributors and enterprises — who want to grow with a modern, secure and transparent payment infrastructure from day one.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-7 py-3.5 font-semibold shadow-soft hover:bg-brand-blue transition">
+          <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
+            <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
               Become a Founding Partner <ArrowRight className="size-4" />
             </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-7 py-3.5 font-semibold hover:border-brand-blue transition">
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition">
               Explore Services
             </Link>
           </div>
         </div>
         <div className="lg:col-span-5">
-          <div className="rounded-3xl bg-white border border-border/60 shadow-soft p-7">
+          <div className="rounded-3xl bg-white border border-border/60 shadow-soft p-5 sm:p-7">
             <div className="text-xs font-semibold tracking-wider text-brand-blue uppercase">Why Businesses Trust Us</div>
             <ul className="mt-5 space-y-3">
               {trust.map((t) => (
@@ -73,8 +73,8 @@ function Hero() {
             </ul>
             <div className="mt-6 grid grid-cols-3 gap-3 text-center">
               {[["99.9%", "Target Uptime"], ["24/7", "Partner Support"], ["Bank-grade", "Security"]].map(([v, l]) => (
-                <div key={l} className="rounded-xl bg-muted/50 p-3">
-                  <div className="text-lg font-bold text-brand-blue">{v}</div>
+                <div key={l} className="rounded-xl bg-muted/50 p-2 sm:p-3 min-w-0">
+                  <div className="text-sm sm:text-lg font-bold text-brand-blue truncate">{v}</div>
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{l}</div>
                 </div>
               ))}
