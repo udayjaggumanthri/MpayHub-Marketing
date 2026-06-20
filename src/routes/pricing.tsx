@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { PageHeader } from "@/components/site/PageHeader";
+import { Reveal } from "@/components/site/Reveal";
 import {
   Check, TrendingUp, Layers, Wallet, Headphones, BarChart3, Grid3x3,
   ArrowRight, FileCheck, ClipboardCheck, Rocket, Activity, LineChart, Sprout,
@@ -86,8 +87,8 @@ function PartnersPage() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {tiers.map((t) => (
-              <div key={t.name} className={`relative rounded-2xl bg-white p-5 sm:p-7 border-2 shadow-card flex flex-col min-w-0 ${t.popular ? "border-brand-blue shadow-soft" : "border-border/60"}`}>
+            {tiers.map((t, i) => (
+              <Reveal key={t.name} delay={i * 90} className={`relative rounded-2xl bg-white p-5 sm:p-7 border-2 shadow-card flex flex-col min-w-0 ${t.popular ? "border-brand-blue shadow-soft" : "border-border/60"}`}>
                 {t.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-brand text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</div>}
                 <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">{t.tag}</div>
                 <h3 className="mt-2 text-xl sm:text-2xl font-bold">{t.name}</h3>
@@ -107,7 +108,7 @@ function PartnersPage() {
                 ) : (
                   <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className={`mt-6 w-full text-center rounded-xl py-3 font-semibold transition ${t.popular ? "bg-gradient-brand text-white hover:opacity-95" : "bg-muted hover:bg-brand-blue hover:text-white"}`}>{t.cta}</a>
                 )}
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -120,12 +121,12 @@ function PartnersPage() {
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Why Join Our <span className="text-gradient-brand">Partner Network</span></h2>
           </div>
           <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {benefits.map((b) => (
-              <div key={b.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
+            {benefits.map((b, i) => (
+              <Reveal key={b.title} delay={i * 70} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
                 <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4"><b.icon className="size-5 text-white" /></div>
                 <h3 className="font-bold text-lg">{b.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -139,12 +140,12 @@ function PartnersPage() {
           </div>
           <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {steps.map((s, i) => (
-              <div key={s.t} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card relative">
+              <Reveal key={s.t} delay={i * 70} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card relative">
                 <div className="absolute -top-3 -left-3 size-10 rounded-xl bg-gradient-brand grid place-items-center text-white font-bold">{i + 1}</div>
                 <div className="size-12 rounded-xl bg-accent grid place-items-center mb-4 ml-8"><s.icon className="size-5 text-brand-blue" /></div>
                 <h3 className="font-bold text-lg">{s.t}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -152,11 +153,11 @@ function PartnersPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <div className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
+          <Reveal className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Ready to launch your fintech business?</h2>
             <p className="mt-3 text-sm sm:text-base text-white/90">Register today and start earning recurring revenue with India's growing digital payment ecosystem.</p>
             <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Become a Partner <ArrowRight className="size-4" /></a>
-          </div>
+          </Reveal>
         </div>
       </section>
       <Footer />
