@@ -24,7 +24,7 @@ const tiers = [
     name: "Retailer",
     tag: "Entry Level",
     desc: "Ideal for local shops, service centers and entrepreneurs.",
-    income: "Up to ₹300/day",
+    income: "Local storefront",
     commission: "5% – 10%",
     features: ["Free onboarding support", "Basic business dashboard", "Weekly settlements", "Access to essential services"],
     cta: "Start as Retailer",
@@ -33,7 +33,7 @@ const tiers = [
     name: "Distributor",
     tag: "Popular Choice",
     desc: "Perfect for businesses managing multiple retailers.",
-    income: "₹1,000+/day",
+    income: "Multi-retailer network",
     commission: "10% – 15%",
     popular: true,
     features: ["Retailer management tools", "Advanced reporting dashboard", "Daily settlements", "Business growth support"],
@@ -43,7 +43,7 @@ const tiers = [
     name: "Master Distributor",
     tag: "Professional",
     desc: "Designed for entrepreneurs building larger distribution networks.",
-    income: "₹5,000+/day",
+    income: "District coverage",
     commission: "15% – 20%",
     features: ["District-level management", "Real-time analytics", "Instant settlement options", "Expanded operational control"],
     cta: "Apply Now",
@@ -52,7 +52,7 @@ const tiers = [
     name: "Super Distributor",
     tag: "Enterprise",
     desc: "For businesses seeking regional expansion and large-scale network management.",
-    income: "₹10,000+/day",
+    income: "State-wide expansion",
     commission: "20% – 25%",
     features: ["State-level network control", "Advanced reporting systems", "Dedicated account management", "Priority support services"],
     cta: "Talk to Sales",
@@ -93,9 +93,9 @@ function PartnersPage() {
                 <h3 className="mt-2 text-2xl font-bold">{t.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground min-h-[48px]">{t.desc}</p>
                 <div className="mt-5 rounded-xl bg-muted/50 p-4">
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Income Potential</div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Designed For</div>
                   <div className="mt-1 text-2xl font-bold text-gradient-brand">{t.income}</div>
-                  <div className="mt-2 text-xs text-muted-foreground">Commission: <span className="font-semibold text-foreground">{t.commission}</span></div>
+                  <div className="mt-2 text-xs text-muted-foreground">Commission range: <span className="font-semibold text-foreground">{t.commission}</span></div>
                 </div>
                 <ul className="mt-5 space-y-2.5 text-sm flex-1">
                   {t.features.map((f) => (
