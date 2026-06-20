@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,27 +38,27 @@ function Hero() {
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-7 text-center lg:text-left">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
+          <Reveal delay={0} className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
             <Sparkles className="size-3.5 text-brand-blue" />
             <span className="text-muted-foreground">A new fintech platform for India's next wave of partners</span>
-          </div>
-          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
+          </Reveal>
+          <Reveal as="h1" delay={120} className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
             Digital Payment Solutions for{" "}
             <span className="text-gradient-brand">Growing Businesses</span>
-          </h1>
-          <p className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
+          </Reveal>
+          <Reveal as="p" delay={240} className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
             mPayHub is an emerging fintech platform unifying recharge, bill payments, banking and digital financial services. We are onboarding our founding partners — retailers, distributors and enterprises — who want to grow with a modern, secure and transparent payment infrastructure from day one.
-          </p>
-          <div className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
+          </Reveal>
+          <Reveal delay={360} className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
               Become a Founding Partner <ArrowRight className="size-4" />
             </a>
             <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition">
               Explore Services
             </Link>
-          </div>
+          </Reveal>
         </div>
-        <div className="lg:col-span-5">
+        <Reveal delay={300} y={24} className="lg:col-span-5">
           <div className="rounded-3xl bg-white border border-border/60 shadow-soft p-5 sm:p-7">
             <div className="text-xs font-semibold tracking-wider text-brand-blue uppercase">Why Businesses Trust Us</div>
             <ul className="mt-5 space-y-3">
@@ -79,7 +80,7 @@ function Hero() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
