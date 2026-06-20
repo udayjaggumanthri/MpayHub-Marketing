@@ -4,16 +4,16 @@ import { Footer } from "@/components/site/Footer";
 import { PageHeader } from "@/components/site/PageHeader";
 import {
   Check, TrendingUp, Layers, Wallet, Headphones, BarChart3, Grid3x3,
-  ArrowRight, FileCheck, ClipboardCheck, Rocket, Activity, LineChart, Sprout,
+  ArrowUpRight, FileCheck, ClipboardCheck, Rocket, Activity, LineChart, Sprout,
 } from "lucide-react";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Partner Opportunities — mPayHub" },
-      { name: "description", content: "Build your business with mPayHub. Choose a partnership model — Retailer, Distributor, Master or Super Distributor — and start earning recurring revenue." },
-      { property: "og:title", content: "Partner Opportunities — mPayHub" },
-      { property: "og:description", content: "Retailer, Distributor, Master and Super Distributor partnership models." },
+      { title: "Partner Programme — mPayHub" },
+      { name: "description", content: "Join mPayHub's structured partner ladder — Retailer, Distributor, Master and Super Distributor — with transparent economics, enterprise-grade tooling and dedicated growth support." },
+      { property: "og:title", content: "Partner Programme — mPayHub" },
+      { property: "og:description", content: "A four-tier partner ladder designed to compound." },
     ],
   }),
   component: PartnersPage,
@@ -21,137 +21,161 @@ export const Route = createFileRoute("/pricing")({
 
 const tiers = [
   {
-    name: "Retailer",
-    tag: "Entry Level",
-    desc: "Ideal for local shops, service centers and entrepreneurs.",
-    income: "Local storefront",
+    code: "I", name: "Retailer", tag: "Entry",
+    desc: "For the storefront operator — a single counter, the full range of consumer financial services.",
+    designed: "Local storefronts",
     commission: "5% – 10%",
-    features: ["Free onboarding support", "Basic business dashboard", "Weekly settlements", "Access to essential services"],
-    cta: "Start as Retailer",
+    features: ["Concierge onboarding", "Operational dashboard", "Weekly settlement cycle", "Access to core services"],
   },
   {
-    name: "Distributor",
-    tag: "Popular Choice",
-    desc: "Perfect for businesses managing multiple retailers.",
-    income: "Multi-retailer network",
-    commission: "10% – 15%",
+    code: "II", name: "Distributor", tag: "Growth",
     popular: true,
-    features: ["Retailer management tools", "Advanced reporting dashboard", "Daily settlements", "Business growth support"],
-    cta: "Become Distributor",
+    desc: "For operators managing a network of retailers under a consolidated operational view.",
+    designed: "Multi-retailer networks",
+    commission: "10% – 15%",
+    features: ["Retailer management suite", "Advanced reporting", "Daily settlement", "Dedicated growth manager"],
   },
   {
-    name: "Master Distributor",
-    tag: "Professional",
-    desc: "Designed for entrepreneurs building larger distribution networks.",
-    income: "District coverage",
+    code: "III", name: "Master Distributor", tag: "Professional",
+    desc: "For district operators running hierarchical networks with deeper economic and operational control.",
+    designed: "District-level coverage",
     commission: "15% – 20%",
-    features: ["District-level management", "Real-time analytics", "Instant settlement options", "Expanded operational control"],
-    cta: "Apply Now",
+    features: ["Hierarchical governance", "Real-time analytics", "Instant settlement option", "Expanded operational control"],
   },
   {
-    name: "Super Distributor",
-    tag: "Enterprise",
-    desc: "For businesses seeking regional expansion and large-scale network management.",
-    income: "State-wide expansion",
+    code: "IV", name: "Super Distributor", tag: "Enterprise",
+    desc: "For regional operators architecting state-wide distribution with institutional support.",
+    designed: "State-wide expansion",
     commission: "20% – 25%",
-    features: ["State-level network control", "Advanced reporting systems", "Dedicated account management", "Priority support services"],
-    cta: "Talk to Sales",
+    features: ["State-level governance", "Enterprise reporting", "Dedicated account leadership", "Priority operations response"],
   },
 ];
 
 const benefits = [
-  { icon: TrendingUp, title: "High ROI Potential", desc: "Generate recurring income through multiple digital payment and financial services." },
-  { icon: Layers, title: "Scalable Business Model", desc: "Expand from a single retail outlet to a large distribution network with structured growth opportunities." },
-  { icon: Wallet, title: "Fast Settlements", desc: "Receive timely payouts through efficient settlement systems designed for business continuity." },
-  { icon: Headphones, title: "Dedicated Support", desc: "Access onboarding assistance, technical guidance and dedicated account management." },
-  { icon: BarChart3, title: "Business Analytics", desc: "Track transactions, revenue and performance through comprehensive reporting tools." },
-  { icon: Grid3x3, title: "Multi-Service Platform", desc: "Offer a wide range of financial services from one centralized dashboard." },
+  { icon: TrendingUp, title: "Compounding economics", desc: "Recurring revenue across a portfolio of services — engineered to scale alongside your operations." },
+  { icon: Layers, title: "A graduated ladder", desc: "Move from a single counter to a regional network on the same platform, with the same partner team." },
+  { icon: Wallet, title: "Predictable settlement", desc: "Defined settlement cycles, transparent statements and zero hidden platform fees." },
+  { icon: Headphones, title: "Concierge support", desc: "Onboarding specialists, partner managers and 24/7 operations — accessible without a ticket queue." },
+  { icon: BarChart3, title: "Operational telemetry", desc: "Track transactions, revenue, network performance and partner activity in one observable surface." },
+  { icon: Grid3x3, title: "One platform, every service", desc: "Recharge, BBPS, AEPS, money transfer, identity and enterprise banking — under one contract." },
 ];
 
 const steps = [
-  { icon: ClipboardCheck, t: "Registration", d: "Complete the online registration process by providing your business and contact information." },
-  { icon: FileCheck, t: "KYC Verification", d: "Submit required identity and business verification documents for compliance and account activation." },
-  { icon: Rocket, t: "Service Activation", d: "Once verified, gain access to the dashboard and activate the services relevant to your business model." },
-  { icon: Activity, t: "Start Transactions", d: "Begin offering recharge, bill payment, banking and digital financial services to your customers." },
-  { icon: LineChart, t: "Manage Operations", d: "Monitor transactions, track commissions, view reports and manage your network through a centralized dashboard." },
-  { icon: Sprout, t: "Grow Your Business", d: "Expand your customer base, recruit partners and increase revenue through scalable fintech solutions." },
+  { icon: ClipboardCheck, t: "Registration", d: "Complete a structured onboarding form with business, contact and operational information." },
+  { icon: FileCheck, t: "KYC & Verification", d: "Submit identity and business documents for compliance review and account provisioning." },
+  { icon: Rocket, t: "Activation", d: "Receive credentialled access to the partner dashboard and activate the services relevant to your model." },
+  { icon: Activity, t: "Operations", d: "Begin offering recharge, bill payment, banking and money movement services to your customers." },
+  { icon: LineChart, t: "Reporting", d: "Monitor transactions, commissions, settlement and network performance from a single observable surface." },
+  { icon: Sprout, t: "Growth", d: "Graduate up the partner ladder as your operations and network mature — same platform, expanded mandate." },
 ];
 
 function PartnersPage() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <PageHeader eyebrow="Partner Opportunities" title="Build Your Business" highlight="With Us" description="Join our B2B partner network and choose a partnership model that aligns with your business goals." />
+      <PageHeader
+        index="03"
+        eyebrow="Partner Programme"
+        title="A partner ladder,"
+        highlight="engineered to scale."
+        description="A four-tier partner programme that meets your business where it is today — and provides a deliberate path to where it could be tomorrow."
+      />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tiers.map((t) => (
-              <div key={t.name} className={`relative rounded-2xl bg-white p-7 border-2 shadow-card flex flex-col ${t.popular ? "border-brand-blue shadow-soft" : "border-border/60"}`}>
-                {t.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-brand text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</div>}
-                <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">{t.tag}</div>
-                <h3 className="mt-2 text-2xl font-bold">{t.name}</h3>
-                <p className="mt-2 text-sm text-muted-foreground min-h-[48px]">{t.desc}</p>
-                <div className="mt-5 rounded-xl bg-muted/50 p-4">
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Designed For</div>
-                  <div className="mt-1 text-2xl font-bold text-gradient-brand">{t.income}</div>
-                  <div className="mt-2 text-xs text-muted-foreground">Commission range: <span className="font-semibold text-foreground">{t.commission}</span></div>
+      <section className="py-24 bg-paper">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 border-t border-hairline">
+            {tiers.map((t, i) => (
+              <div key={t.name} className={`relative p-9 border-b border-hairline flex flex-col ${i % 4 !== 3 ? "lg:border-r" : ""} ${i % 2 !== 1 ? "md:border-r" : ""} ${t.popular ? "bg-paper-warm" : ""}`}>
+                {t.popular && <div className="absolute top-0 left-0 right-0 h-px bg-gold" />}
+                <div className="flex items-baseline justify-between">
+                  <span className="font-display text-2xl text-gold">{t.code}</span>
+                  <span className="text-[10px] tracking-[0.22em] uppercase text-muted-foreground">{t.tag}</span>
                 </div>
-                <ul className="mt-5 space-y-2.5 text-sm flex-1">
+                <h3 className="mt-8 font-display text-3xl tracking-tight">{t.name}</h3>
+                <p className="mt-3 text-[14px] text-ink-soft min-h-[64px] leading-relaxed">{t.desc}</p>
+                <div className="mt-7 pt-6 border-t border-hairline">
+                  <div className="text-[11px] tracking-[0.18em] uppercase text-muted-foreground">Designed for</div>
+                  <div className="mt-2 font-display text-xl italic">{t.designed}</div>
+                  <div className="mt-4 text-[11px] tracking-[0.18em] uppercase text-muted-foreground">Commission</div>
+                  <div className="mt-2 font-display text-xl">{t.commission}</div>
+                </div>
+                <ul className="mt-7 space-y-3 text-[14px] flex-1">
                   {t.features.map((f) => (
-                    <li key={f} className="flex gap-2"><Check className="size-4 text-brand-teal flex-shrink-0 mt-0.5" /> <span>{f}</span></li>
+                    <li key={f} className="flex gap-3"><Check className="size-4 text-gold flex-shrink-0 mt-0.5" strokeWidth={1.6} /> <span>{f}</span></li>
                   ))}
                 </ul>
-                <Link to={t.cta === "Talk to Sales" ? "/contact" : "/signup"} className={`mt-6 w-full text-center rounded-xl py-3 font-semibold transition ${t.popular ? "bg-gradient-brand text-white hover:opacity-95" : "bg-muted hover:bg-brand-blue hover:text-white"}`}>{t.cta}</Link>
+                <Link to={t.name === "Super Distributor" ? "/contact" : "/signup"} className={`mt-8 inline-flex items-center justify-between gap-2 px-5 py-3 text-sm font-medium transition rounded-sm ${t.popular ? "bg-ink text-paper hover:bg-ink-soft" : "border border-ink/20 hover:border-ink"}`}>
+                  Apply <ArrowUpRight className="size-3.5" />
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-muted/40">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center max-w-2xl mx-auto">
-            <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Partner Benefits</div>
-            <h2 className="mt-3 text-4xl font-bold">Why Join Our <span className="text-gradient-brand">Partner Network</span></h2>
+      <section className="py-24 bg-paper-warm border-y border-hairline">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
+            <div className="lg:col-span-7">
+              <div className="text-[11px] tracking-[0.22em] uppercase text-muted-foreground">— Programme Benefits</div>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl tracking-tight leading-[1.02]">
+                Built around the <span className="italic text-ink-soft">operator's reality.</span>
+              </h2>
+            </div>
           </div>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {benefits.map((b) => (
-              <div key={b.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
-                <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4"><b.icon className="size-5 text-white" /></div>
-                <h3 className="font-bold text-lg">{b.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 border-t border-hairline">
+            {benefits.map((b, i) => (
+              <div key={b.title} className={`p-8 border-b border-hairline ${i % 3 !== 2 ? "lg:border-r" : ""} ${i % 2 !== 1 ? "md:border-r" : ""}`}>
+                <b.icon className="size-5 text-ink" strokeWidth={1.4} />
+                <h3 className="mt-8 font-display text-2xl tracking-tight">{b.title}</h3>
+                <p className="mt-3 text-[14.5px] text-ink-soft leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center max-w-2xl mx-auto">
-            <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">How It Works</div>
-            <h2 className="mt-3 text-4xl font-bold">Simple <span className="text-gradient-brand">Onboarding Process</span></h2>
+      <section className="py-24 bg-paper">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
+            <div className="lg:col-span-7">
+              <div className="text-[11px] tracking-[0.22em] uppercase text-muted-foreground">— Onboarding</div>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl tracking-tight leading-[1.02]">
+                Six steps. <span className="italic text-ink-soft">One platform.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-5">
+              <p className="text-ink-soft leading-relaxed">A structured onboarding journey — engineered to take you from registration to revenue without operational ambiguity.</p>
+            </div>
           </div>
-          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <ol className="border-t border-hairline">
             {steps.map((s, i) => (
-              <div key={s.t} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card relative">
-                <div className="absolute -top-3 -left-3 size-10 rounded-xl bg-gradient-brand grid place-items-center text-white font-bold">{i + 1}</div>
-                <div className="size-12 rounded-xl bg-accent grid place-items-center mb-4 ml-8"><s.icon className="size-5 text-brand-blue" /></div>
-                <h3 className="font-bold text-lg">{s.t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
-              </div>
+              <li key={s.t} className="grid grid-cols-12 gap-6 py-8 border-b border-hairline items-start">
+                <div className="col-span-2 md:col-span-1 font-display text-2xl text-gold">{String(i + 1).padStart(2, "0")}</div>
+                <div className="col-span-10 md:col-span-4 flex items-center gap-4">
+                  <s.icon className="size-5 text-ink" strokeWidth={1.4} />
+                  <div className="font-display text-2xl tracking-tight">{s.t}</div>
+                </div>
+                <div className="col-span-12 md:col-span-7 text-[15px] text-ink-soft leading-relaxed md:pl-6 md:border-l border-hairline">{s.d}</div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="rounded-3xl bg-gradient-brand text-white p-12 md:p-14 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to launch your fintech business?</h2>
-            <p className="mt-3 text-white/90">Register today and start earning recurring revenue with India's growing digital payment ecosystem.</p>
-            <Link to="/signup" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">Become a Partner <ArrowRight className="size-4" /></Link>
+      <section className="bg-ink text-paper">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10 py-24 grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-8">
+            <div className="text-[11px] tracking-[0.22em] uppercase text-gold-soft">— Founding Cohort</div>
+            <h2 className="mt-6 font-display text-4xl md:text-6xl tracking-tight leading-[1.02]">
+              The first hundred partners <span className="italic text-gold-soft">will define the firm.</span>
+            </h2>
+            <p className="mt-6 text-paper/75 max-w-2xl leading-relaxed">If you are operating today and want to build the next chapter with us, we would like to speak. Founding partners receive priority onboarding, direct access to leadership and economics designed to compound.</p>
+          </div>
+          <div className="lg:col-span-4 flex lg:justify-end">
+            <Link to="/signup" className="inline-flex items-center gap-2 bg-paper text-ink px-6 py-3.5 text-sm font-medium hover:bg-gold-soft transition rounded-sm">
+              Apply to the cohort <ArrowUpRight className="size-3.5" />
+            </Link>
           </div>
         </div>
       </section>
