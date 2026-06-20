@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { PageHeader } from "@/components/site/PageHeader";
+import { Reveal } from "@/components/site/Reveal";
 import {
   Smartphone, Tv, Zap, Flame, Droplet, Wifi, Car, Banknote, Shield,
   Landmark, FileText, Repeat, Wallet, IdCard, Network, CreditCard,
@@ -76,12 +77,12 @@ function ServicesPage() {
               <div className="text-sm text-muted-foreground">{g.items.length} services</div>
             </div>
             <div className="mt-8 sm:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {g.items.map((s) => (
-                <div key={s.title} className="rounded-2xl bg-white p-5 sm:p-7 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all">
+              {g.items.map((s, i) => (
+                <Reveal key={s.title} delay={i * 60} className="rounded-2xl bg-white p-5 sm:p-7 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all">
                   <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4"><s.icon className="size-5 text-white" /></div>
                   <h3 className="font-bold text-lg">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -90,11 +91,11 @@ function ServicesPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <div className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
+          <Reveal className="rounded-3xl bg-gradient-brand text-white p-8 sm:p-12 md:p-14 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Activate every service from one dashboard</h2>
             <p className="mt-3 text-sm sm:text-base text-white/90">Onboard quickly, complete KYC and start transacting across recharge, BBPS, AEPS and banking services.</p>
             <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">Start onboarding <ArrowRight className="size-4" /></a>
-          </div>
+          </Reveal>
         </div>
       </section>
       <Footer />

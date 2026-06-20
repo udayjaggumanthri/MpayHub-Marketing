@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { PageHeader } from "@/components/site/PageHeader";
+import { Reveal } from "@/components/site/Reveal";
 import { Mail, MapPin, Phone, MessageCircle, Briefcase, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -64,34 +65,36 @@ function ContactPage() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-3 sm:space-y-4">
-            {channels.map((c) => (
-              <div key={c.label} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card flex items-start gap-4">
+            {channels.map((c, i) => (
+              <Reveal key={c.label} delay={i * 70} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card flex items-start gap-4">
                 <div className="size-11 rounded-xl bg-gradient-brand grid place-items-center flex-shrink-0"><c.icon className="size-5 text-white" /></div>
                 <div className="min-w-0">
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">{c.label}</div>
                   <div className="mt-1 font-semibold break-words">{c.value}</div>
                   <div className="text-xs text-muted-foreground mt-0.5">{c.note}</div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
-          <form onSubmit={onSubmit} className="lg:col-span-3 rounded-2xl bg-white p-5 sm:p-8 border border-border/60 shadow-card space-y-4 h-fit">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Field label="Full name" name="name" />
-              <Field label="Business name" name="business" />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Field label="Email" name="email" type="email" />
-              <Field label="Phone" name="phone" type="tel" />
-            </div>
-            <div>
-              <label className="text-sm font-medium">Message</label>
-              <textarea name="message" required rows={5} className="mt-1.5 w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue" />
-            </div>
-            <button disabled={sending} className="inline-flex items-center gap-2 rounded-full bg-gradient-brand text-white px-6 py-3 font-semibold shadow-soft hover:opacity-95 disabled:opacity-60 transition">
-              {sending ? "Sending..." : <>Send message <Send className="size-4" /></>}
-            </button>
-          </form>
+          <Reveal delay={120} className="lg:col-span-3 h-fit">
+            <form onSubmit={onSubmit} className="rounded-2xl bg-white p-5 sm:p-8 border border-border/60 shadow-card space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="Full name" name="name" />
+                <Field label="Business name" name="business" />
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="Email" name="email" type="email" />
+                <Field label="Phone" name="phone" type="tel" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">Message</label>
+                <textarea name="message" required rows={5} className="mt-1.5 w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue" />
+              </div>
+              <button disabled={sending} className="inline-flex items-center gap-2 rounded-full bg-gradient-brand text-white px-6 py-3 font-semibold shadow-soft hover:opacity-95 disabled:opacity-60 transition">
+                {sending ? "Sending..." : <>Send message <Send className="size-4" /></>}
+              </button>
+            </form>
+          </Reveal>
         </div>
       </section>
 

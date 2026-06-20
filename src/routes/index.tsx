@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,27 +38,27 @@ function Hero() {
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-7 text-center lg:text-left">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
+          <Reveal delay={0} className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
             <Sparkles className="size-3.5 text-brand-blue" />
             <span className="text-muted-foreground">A new fintech platform for India's next wave of partners</span>
-          </div>
-          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
+          </Reveal>
+          <Reveal as="h1" delay={120} className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
             Digital Payment Solutions for{" "}
             <span className="text-gradient-brand">Growing Businesses</span>
-          </h1>
-          <p className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
+          </Reveal>
+          <Reveal as="p" delay={240} className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
             mPayHub is an emerging fintech platform unifying recharge, bill payments, banking and digital financial services. We are onboarding our founding partners — retailers, distributors and enterprises — who want to grow with a modern, secure and transparent payment infrastructure from day one.
-          </p>
-          <div className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
+          </Reveal>
+          <Reveal delay={360} className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
               Become a Founding Partner <ArrowRight className="size-4" />
             </a>
             <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition">
               Explore Services
             </Link>
-          </div>
+          </Reveal>
         </div>
-        <div className="lg:col-span-5">
+        <Reveal delay={300} y={24} className="lg:col-span-5">
           <div className="rounded-3xl bg-white border border-border/60 shadow-soft p-5 sm:p-7">
             <div className="text-xs font-semibold tracking-wider text-brand-blue uppercase">Why Businesses Trust Us</div>
             <ul className="mt-5 space-y-3">
@@ -79,7 +80,7 @@ function Hero() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -104,26 +105,26 @@ function Services() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto">
+        <Reveal className="text-center max-w-2xl mx-auto">
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Service Overview</div>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Comprehensive <span className="text-gradient-brand">Digital Payment Services</span></h2>
           <p className="mt-4 text-sm sm:text-base text-muted-foreground">Access every major recharge, bill payment, banking, and financial service through a single platform — built for retailers, distributors and enterprises seeking efficient transaction management.</p>
-        </div>
+        </Reveal>
         <div className="mt-10 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-          {services.map((s) => (
-            <div key={s.title} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center">
+          {services.map((s, i) => (
+            <Reveal key={s.title} delay={i * 50} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center">
               <div className="mx-auto size-12 rounded-xl bg-gradient-brand grid place-items-center mb-3">
                 <s.icon className="size-5 text-white" />
               </div>
               <div className="text-sm font-semibold leading-snug">{s.title}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <Reveal delay={150} className="mt-10 text-center">
           <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition shadow-card">
             View All Services <ArrowRight className="size-4" />
           </Link>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -140,22 +141,22 @@ function PartnerEcosystem() {
   return (
     <section className="py-16 sm:py-24 bg-gradient-hero">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-        <div>
+        <Reveal>
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Partner Ecosystem</div>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">A <span className="text-gradient-brand">Partner-First</span> Fintech Platform</h2>
           <p className="mt-5 text-sm sm:text-base text-muted-foreground leading-relaxed">We are opening early access to retailers, distributors and business partners who want to build a digital financial services business with us from the ground up. Our partnership models are designed for sustainable, transparent growth — whether you are launching a single outlet or a regional distribution network.</p>
           <Link to="/pricing" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
             See Partner Plans <ArrowRight className="size-4" />
           </Link>
-        </div>
+        </Reveal>
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
-          {partnerTiers.map((p) => (
-            <div key={p.name} className="rounded-2xl bg-white p-4 sm:p-6 border border-border/60 shadow-card min-w-0">
+          {partnerTiers.map((p, i) => (
+            <Reveal key={p.name} delay={i * 80} className="rounded-2xl bg-white p-4 sm:p-6 border border-border/60 shadow-card min-w-0">
               <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">{p.tag}</div>
               <div className="mt-2 text-lg sm:text-xl font-bold">{p.name}</div>
               <div className="mt-3 text-base sm:text-xl font-bold text-gradient-brand leading-snug">{p.income}</div>
               <div className="mt-1 text-xs text-muted-foreground">Designed for</div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -176,19 +177,19 @@ function Trust() {
   return (
     <section className="py-16 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto">
+        <Reveal className="text-center max-w-2xl mx-auto">
           <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Trust & Reliability</div>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Why Businesses <span className="text-gradient-brand">Trust Us</span></h2>
-        </div>
+        </Reveal>
         <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {reasons.map((r) => (
-            <div key={r.title} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
+          {reasons.map((r, i) => (
+            <Reveal key={r.title} delay={i * 70} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
               <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4">
                 <r.icon className="size-5 text-white" />
               </div>
               <h3 className="font-semibold text-lg">{r.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -203,7 +204,7 @@ function GrowthCTA() {
         <div className="relative overflow-hidden rounded-3xl bg-gradient-brand text-white p-6 sm:p-12 md:p-16">
           <div className="absolute -top-20 -right-20 size-72 rounded-full bg-white/10 blur-3xl" />
           <div className="relative grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-            <div>
+            <Reveal>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Globe className="size-3.5" /> Building Together</div>
               <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">An Emerging Platform with <span className="opacity-90">Real Ambition</span></h2>
               <p className="mt-4 text-sm sm:text-base text-white/90 leading-relaxed">
@@ -217,18 +218,18 @@ function GrowthCTA() {
                   Talk to Our Team
                 </Link>
               </div>
-            </div>
+            </Reveal>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {[
+              {([
                 ["100", "Initial Partner Cohort"],
                 ["10,000+", "Target Daily Transactions"],
                 ["99.5%", "Uptime Commitment"],
                 ["Zero", "Hidden Platform Fees"],
-              ].map(([v, l]) => (
-                <div key={l} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-4 sm:p-5 min-w-0">
+              ] as const).map(([v, l], i) => (
+                <Reveal key={l} delay={i * 80} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-4 sm:p-5 min-w-0">
                   <div className="text-2xl sm:text-3xl font-bold truncate">{v}</div>
                   <div className="mt-1 text-xs uppercase tracking-wider text-white/80">{l}</div>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
