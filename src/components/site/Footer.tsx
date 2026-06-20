@@ -5,7 +5,7 @@ export function Footer() {
   const cols = [
     { h: "Platform", l: [["Services", "/services"], ["Partner Plans", "/pricing"], ["API Banking", "/services"], ["Payment Gateway", "/services"]] as const },
     { h: "Company", l: [["About", "/about"], ["Leadership", "/about"], ["Compliance", "/about"], ["Contact", "/contact"]] as const },
-    { h: "Resources", l: [["Help Center", "/contact"], ["Onboarding", "/signup"], ["Partner Login", "/login"], ["Terms & Privacy", "/about"]] as const },
+    { h: "Resources", l: [["Help Center", "/contact"], ["Terms & Privacy", "/about"]] as const },
   ];
   return (
     <footer className="bg-foreground text-background py-12 sm:py-14">
