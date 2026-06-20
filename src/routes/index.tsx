@@ -36,20 +36,19 @@ function Hero() {
         <div className="absolute -bottom-20 -right-32 size-[28rem] rounded-full bg-brand-blue/20 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-        <div className="lg:col-span-7">
-          <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
+        <div className="lg:col-span-7 text-center lg:text-left">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
             <Sparkles className="size-3.5 text-brand-blue" />
-            <span className="rounded-full bg-brand-blue/10 px-2 py-0.5 text-brand-blue font-semibold">Now Launching</span>
             <span className="text-muted-foreground">A new fintech platform for India's next wave of partners</span>
           </div>
           <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
             Digital Payment Solutions for{" "}
             <span className="text-gradient-brand">Growing Businesses</span>
           </h1>
-          <p className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+          <p className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
             mPayHub is an emerging fintech platform unifying recharge, bill payments, banking and digital financial services. We are onboarding our founding partners — retailers, distributors and enterprises — who want to grow with a modern, secure and transparent payment infrastructure from day one.
           </p>
-          <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
+          <div className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
               Become a Founding Partner <ArrowRight className="size-4" />
             </a>
