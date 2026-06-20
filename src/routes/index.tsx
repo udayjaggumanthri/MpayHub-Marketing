@@ -205,20 +205,27 @@ function GrowthCTA() {
           <div className="absolute -top-20 -right-20 size-72 rounded-full bg-white/10 blur-3xl" />
           <div className="relative grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Globe className="size-3.5" /> Business Growth</div>
-              <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">Grow with us from <span className="opacity-90">Day One</span></h2>
-              <p className="mt-4 text-white/90 leading-relaxed">As a newly launched platform, we are investing in every founding partner — with the tools, technology and direct support needed to build, transact and scale with confidence.</p>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Globe className="size-3.5" /> Building Together</div>
+              <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight">An Emerging Platform with <span className="opacity-90">Real Ambition</span></h2>
+              <p className="mt-4 text-white/90 leading-relaxed">
+                We are a new fintech venture setting out to build a transparent, reliable payment infrastructure for India's businesses. We do not claim decades of legacy — instead, we bring a dedicated team, clear milestones, robust technology, and an unwavering commitment to earning your trust from the very first transaction.
+              </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link to="/signup" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">
                   Join Early Access <ArrowRight className="size-4" />
                 </Link>
                 <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-semibold hover:bg-white/10 transition">
-                  Talk to Sales
+                  Talk to Our Team
                 </Link>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[["12+", "Services at Launch"], ["99.9%", "Target Platform Uptime"], ["4", "Partner Tiers"], ["24/7", "Support Availability"]].map(([v, l]) => (
+              {[
+                ["100", "Initial Partner Cohort"],
+                ["10,000+", "Target Daily Transactions"],
+                ["99.5%", "Uptime Commitment"],
+                ["Zero", "Hidden Platform Fees"],
+              ].map(([v, l]) => (
                 <div key={l} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-5">
                   <div className="text-3xl font-bold">{v}</div>
                   <div className="mt-1 text-xs uppercase tracking-wider text-white/80">{l}</div>
