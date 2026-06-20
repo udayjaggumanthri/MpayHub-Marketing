@@ -110,7 +110,7 @@ function AboutPage() {
           <div className="rounded-3xl bg-gradient-brand text-white p-12 md:p-14 text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Sparkles className="size-3.5" /> Partner with us</div>
             <h2 className="mt-5 text-3xl md:text-4xl font-bold">Ready to grow with mPayHub?</h2>
-            <p className="mt-3 text-white/90">Join thousands of businesses building recurring revenue with our fintech platform.</p>
+            <p className="mt-3 text-white/90">Be among the founding partners shaping a new digital payments network in India.</p>
             <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-7 py-3.5 font-semibold hover:bg-white/95 transition">Talk to our team <ArrowRight className="size-4" /></Link>
           </div>
         </div>
