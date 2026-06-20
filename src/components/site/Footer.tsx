@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background py-12 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-        <div>
+        <div className="col-span-2 md:col-span-1">
           <Link to="/" className="inline-flex items-center bg-white rounded-xl p-2 sm:p-3" aria-label="mPayHub home">
             <img src={logo.url} alt="mPayHub" className="h-10 sm:h-12 w-auto object-contain" />
           </Link>
