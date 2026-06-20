@@ -61,21 +61,21 @@ function ContactPage() {
       <Nav />
       <PageHeader eyebrow="Contact Us" title="Get in" highlight="Touch" description="Whether you are interested in becoming a partner, integrating our APIs, or learning more about our services, our team is ready to assist you." />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-2 space-y-4">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-8">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             {channels.map((c) => (
-              <div key={c.label} className="rounded-2xl bg-white p-5 border border-border/60 shadow-card flex items-start gap-4">
+              <div key={c.label} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card flex items-start gap-4">
                 <div className="size-11 rounded-xl bg-gradient-brand grid place-items-center flex-shrink-0"><c.icon className="size-5 text-white" /></div>
                 <div className="min-w-0">
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">{c.label}</div>
-                  <div className="mt-1 font-semibold truncate">{c.value}</div>
+                  <div className="mt-1 font-semibold break-words">{c.value}</div>
                   <div className="text-xs text-muted-foreground mt-0.5">{c.note}</div>
                 </div>
               </div>
             ))}
           </div>
-          <form onSubmit={onSubmit} className="lg:col-span-3 rounded-2xl bg-white p-8 border border-border/60 shadow-card space-y-4 h-fit">
+          <form onSubmit={onSubmit} className="lg:col-span-3 rounded-2xl bg-white p-5 sm:p-8 border border-border/60 shadow-card space-y-4 h-fit">
             <div className="grid sm:grid-cols-2 gap-4">
               <Field label="Full name" name="name" />
               <Field label="Business name" name="business" />
@@ -106,17 +106,17 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/40">
-        <div className="mx-auto max-w-3xl px-6">
+      <section className="py-16 sm:py-20 bg-muted/40">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="text-center">
             <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">FAQ</div>
-            <h2 className="mt-3 text-4xl font-bold">Frequently Asked <span className="text-gradient-brand">Questions</span></h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Frequently Asked <span className="text-gradient-brand">Questions</span></h2>
           </div>
-          <div className="mt-10 space-y-3">
+          <div className="mt-8 sm:mt-10 space-y-3">
             {faqs.map(([q, a]) => (
-              <details key={q} className="group rounded-xl bg-white border border-border/60 p-5 shadow-card">
-                <summary className="cursor-pointer font-semibold flex items-center justify-between list-none">
-                  {q} <span className="text-brand-blue text-xl group-open:rotate-45 transition-transform">+</span>
+              <details key={q} className="group rounded-xl bg-white border border-border/60 p-4 sm:p-5 shadow-card">
+                <summary className="cursor-pointer font-semibold flex items-start justify-between gap-3 list-none text-sm sm:text-base">
+                  <span className="flex-1">{q}</span> <span className="text-brand-blue text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
                 </summary>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{a}</p>
               </details>
