@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — mPayHub" },
-      { name: "description", content: "Get in touch with the mPayHub team for partnership, API integration, or service inquiries. We reply within one business day." },
+      { name: "description", content: "Get in touch with the mPayHub team for partnership or service inquiries. We reply within one business day." },
       { property: "og:title", content: "Contact — mPayHub" },
       { property: "og:description", content: "Talk to sales, support or partnership teams." },
     ],
@@ -30,11 +30,10 @@ const channels = [
 const faqs = [
   ["What documents are required for registration?", "Basic identity, address and business verification documents may be required depending on the partnership model."],
   ["How long does account activation take?", "Most applications are processed after successful KYC verification and document review."],
-  ["What services can I offer after activation?", "Partners can access recharge services, bill payments, AEPS, BBPS, money transfer, API banking and other financial services based on eligibility."],
+  ["What services can I offer after activation?", "Partners can access recharge services, bill payments, AEPS, BBPS, money transfer, and other financial services based on eligibility."],
   ["How are commissions calculated?", "Commission structures vary by service category and partnership tier."],
   ["Are settlements processed daily?", "Settlement frequency depends on the partnership model and service type."],
   ["Do you provide training and support?", "Yes. We offer onboarding assistance, operational guidance and ongoing support for partners."],
-  ["Can businesses integrate through APIs?", "Yes. Our API Banking and Payment Gateway solutions support seamless integration for businesses and developers."],
 ];
 
 function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
@@ -60,7 +59,7 @@ function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
-      <PageHeader eyebrow="Contact Us" title="Get in" highlight="Touch" description="Whether you are interested in becoming a partner, integrating our APIs, or learning more about our services, our team is ready to assist you." />
+      <PageHeader eyebrow="Contact Us" title="Get in" highlight="Touch" description="Whether you are interested in becoming a partner or learning more about our services, our team is ready to assist you." />
 
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-8">

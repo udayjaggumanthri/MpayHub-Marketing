@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "../components/ui/sonner";
+import favicon from "../assets/mpayhub-fav-icon.png";
 
 function NotFoundComponent() {
   return (
@@ -88,6 +89,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@mPayHub" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: favicon,
+      },
       {
         rel: "stylesheet",
         href: appCss,

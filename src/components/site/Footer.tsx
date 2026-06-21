@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/mpayhub-logo.png.asset.json";
+import logo from "@/assets/mpayhub-logo.png";
 
 export function Footer() {
   const cols = [
-    { h: "Platform", l: [["Services", "/services"], ["Partner Plans", "/pricing"], ["API Banking", "/services"], ["Payment Gateway", "/services"]] as const },
+    { h: "Platform", l: [["Services", "/services"], ["Partner Plans", "/pricing"]] as const },
     { h: "Company", l: [["About", "/about"], ["Leadership", "/about"], ["Compliance", "/about"], ["Contact", "/contact"]] as const },
     { h: "Resources", l: [["Help Center", "/contact"], ["Terms & Privacy", "/about"]] as const },
   ];
@@ -12,7 +12,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
         <div className="col-span-2 md:col-span-1">
           <Link to="/" className="inline-flex items-center bg-white rounded-xl p-2 sm:p-3" aria-label="mPayHub home">
-            <img src={logo.url} alt="mPayHub" className="h-10 sm:h-12 w-auto object-contain" />
+            <img src={logo} alt="mPayHub" className="h-10 sm:h-12 w-auto object-contain" />
           </Link>
           <p className="mt-5 text-sm text-background/70 leading-relaxed">Secure digital payment infrastructure for retailers, distributors and enterprises across India.</p>
         </div>

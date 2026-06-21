@@ -1,15 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
-import logo from "@/assets/mpayhub-logo.png.asset.json";
+import logo from "@/assets/mpayhub-logo.png";
 
 const PARTNER_URL = "https://partner.mpayhub.in/";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", exact: true },
+  { to: "/about", label: "About", exact: false },
   { to: "/services", label: "Services", exact: false },
   { to: "/pricing", label: "Partners", exact: false },
-  { to: "/about", label: "About", exact: false },
   { to: "/contact", label: "Contact", exact: false },
 ] as const;
 
@@ -69,7 +69,7 @@ export function Nav() {
             onClick={close}
           >
             <img
-              src={logo.url}
+              src={logo}
               alt="mPayHub"
               className={`w-auto object-contain transition-all duration-500 ease-out group-hover:scale-[1.03] ${
                 scrolled

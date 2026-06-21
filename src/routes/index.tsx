@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "mPayHub — Digital Payment Solutions for Growing Businesses" },
-      { name: "description", content: "Unified fintech platform for recharge, bill payments, AEPS, BBPS, money transfer and API banking. Built for retailers, distributors and enterprises." },
+      { name: "description", content: "Unified fintech platform for recharge, bill payments, AEPS, BBPS, and money transfer. Built for retailers, distributors and enterprises." },
       { property: "og:title", content: "mPayHub — Digital Payment Infrastructure" },
       { property: "og:description", content: "Secure, scalable B2B fintech platform powering India's retailers, distributors and enterprises." },
     ],
@@ -28,7 +28,7 @@ function Hero() {
     "Real-time settlements and reporting",
     "Built for a scalable B2B partner network",
     "Hands-on onboarding and partner support",
-    "Modern API-driven financial infrastructure",
+    "Reliable and transparent business ecosystem",
   ];
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
@@ -98,7 +98,6 @@ const services = [
   { icon: FileText, title: "BBPS Services" },
   { icon: Repeat, title: "Money Transfer" },
   { icon: Wallet, title: "Aadhaar Pay" },
-  { icon: CreditCard, title: "Payment Gateway" },
 ];
 
 function Services() {

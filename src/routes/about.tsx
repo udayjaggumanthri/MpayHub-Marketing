@@ -21,7 +21,7 @@ const journey = [
   ["Foundation", "Established with a vision to simplify digital financial services and empower local businesses."],
   ["Expansion", "Introduced recharge, bill payment and banking services to support growing customer needs."],
   ["Network Growth", "Expanded our partner ecosystem across multiple regions through retailer and distributor programs."],
-  ["Technology Advancement", "Enhanced platform capabilities through API banking, automation, analytics and enterprise-grade security."],
+  ["Technology Advancement", "Enhanced platform capabilities through automation, analytics and enterprise-grade security."],
   ["Future Ready", "Continuing to innovate and build scalable financial technology solutions for businesses nationwide."],
 ];
 

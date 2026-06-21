@@ -15,7 +15,7 @@ export const Route = createFileRoute("/services")({
       { title: "Services — mPayHub" },
       { name: "description", content: "All major recharge, banking and bill payment services on one platform. Fast, secure and reliable digital financial services." },
       { property: "og:title", content: "Services — mPayHub" },
-      { property: "og:description", content: "Recharge, BBPS, AEPS, money transfer, API banking and more." },
+      { property: "og:description", content: "Recharge, BBPS, AEPS, money transfer, and more." },
     ],
   }),
   component: ServicesPage,
@@ -51,13 +51,7 @@ const groups = [
       { icon: IdCard, title: "PAN Services", desc: "PAN card application, correction and related documentation services." },
     ],
   },
-  {
-    title: "Enterprise Solutions",
-    items: [
-      { icon: Network, title: "API Banking", desc: "Comprehensive API solutions enabling businesses to integrate banking and payment services into their applications." },
-      { icon: CreditCard, title: "Payment Gateway", desc: "Secure online payment processing for websites, mobile applications and enterprise platforms." },
-    ],
-  },
+
 ];
 
 function ServicesPage() {
