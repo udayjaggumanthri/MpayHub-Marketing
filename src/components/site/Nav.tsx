@@ -72,10 +72,8 @@ export function Nav() {
             <img
               src={logo}
               alt="mPayHub"
-              className={`w-auto object-contain transition-all duration-500 ease-out group-hover:scale-[1.02] ${
-                scrolled
-                  ? "h-10 md:h-11 opacity-95"
-                  : "h-11 sm:h-12 md:h-14 opacity-100"
+              className={`h-11 sm:h-12 md:h-14 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-[1.02] ${
+                scrolled ? "opacity-95" : "opacity-100"
               }`}
             />
           </Link>
