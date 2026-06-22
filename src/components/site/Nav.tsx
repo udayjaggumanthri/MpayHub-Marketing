@@ -73,8 +73,8 @@ export function Nav() {
               alt="mPayHub"
               className={`w-auto object-contain transition-all duration-500 ease-out group-hover:scale-[1.03] ${
                 scrolled
-                  ? "h-8 sm:h-9 md:h-10 opacity-90"
-                  : "h-10 sm:h-12 md:h-14 opacity-100"
+                  ? "h-10 sm:h-12 md:h-14 opacity-90"
+                  : "h-14 sm:h-16 md:h-20 opacity-100"
               }`}
             />
           </Link>
