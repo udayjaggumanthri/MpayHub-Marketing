@@ -1,6 +1,16 @@
 import { Sparkles } from "lucide-react";
 
-export function PageHeader({ eyebrow, title, highlight, description }: { eyebrow: string; title: string; highlight?: string; description: string }) {
+export function PageHeader({
+  eyebrow,
+  title,
+  highlight,
+  description,
+}: {
+  eyebrow: string;
+  title: string;
+  highlight?: string;
+  description: string;
+}) {
   return (
     <section className="relative overflow-hidden bg-gradient-hero border-b border-border/60">
       <div className="absolute -top-20 -left-32 size-96 rounded-full bg-brand-teal/20 blur-3xl opacity-60" />
@@ -13,7 +23,9 @@ export function PageHeader({ eyebrow, title, highlight, description }: { eyebrow
         <h1 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.05]">
           {title} {highlight && <span className="text-gradient-brand">{highlight}</span>}
         </h1>
-        <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">{description}</p>
+        <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          {description}
+        </p>
       </div>
     </section>
   );

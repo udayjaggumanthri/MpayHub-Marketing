@@ -1,4 +1,11 @@
-import { useEffect, useRef, useState, type ReactNode, type ElementType, type CSSProperties } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+  type ElementType,
+  type CSSProperties,
+} from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -45,7 +52,7 @@ export function Reveal({
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -58,7 +65,8 @@ export function Reveal({
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : `translateY(${y}px)`,
-        transition: "opacity 700ms cubic-bezier(0.22,1,0.36,1), transform 700ms cubic-bezier(0.22,1,0.36,1)",
+        transition:
+          "opacity 700ms cubic-bezier(0.22,1,0.36,1), transform 700ms cubic-bezier(0.22,1,0.36,1)",
         transitionDelay: visible ? `${delay}ms` : "0ms",
         willChange: "opacity, transform",
         ...style,

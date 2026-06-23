@@ -80,10 +80,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "mPayHub — Digital Payment Solutions for Growing Businesses" },
-      { name: "description", content: "Secure digital payment infrastructure for retailers, distributors and enterprises across India." },
+      {
+        name: "description",
+        content:
+          "Secure digital payment infrastructure for retailers, distributors and enterprises across India.",
+      },
       { name: "author", content: "mPayHub" },
       { property: "og:title", content: "mPayHub" },
-      { property: "og:description", content: "Secure digital payment infrastructure for businesses across India." },
+      {
+        property: "og:description",
+        content: "Secure digital payment infrastructure for businesses across India.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@mPayHub" },

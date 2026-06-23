@@ -46,7 +46,9 @@ export function Nav() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-2 flex items-center justify-center gap-2 text-xs sm:text-sm font-medium">
           <Zap className="size-3.5 sm:size-4 text-amber-300 fill-amber-300 shrink-0" />
-          <span className="truncate">Fast Recharge &amp; Bill Payment Platform — onboarding founding partners now</span>
+          <span className="truncate">
+            Fast Recharge &amp; Bill Payment Platform — onboarding founding partners now
+          </span>
         </div>
       </div>
 
@@ -72,8 +74,10 @@ export function Nav() {
             <img
               src={logo}
               alt="mPayHub"
-              className={`h-11 sm:h-12 md:h-14 w-auto object-contain transition-all duration-500 ease-out group-hover:scale-[1.02] ${
-                scrolled ? "opacity-95" : "opacity-100"
+              className={`object-contain transition-all duration-500 ease-out group-hover:scale-[1.02] ${
+                scrolled
+                  ? "h-[50px] w-[117.7px] sm:h-[56px] sm:w-[131.8px] md:h-[62px] md:w-[146px] opacity-95"
+                  : "h-[64px] w-[150.7px] sm:h-[72px] sm:w-[169.5px] md:h-[80px] md:w-[188.4px] opacity-100"
               }`}
             />
           </Link>
@@ -101,7 +105,9 @@ export function Nav() {
                       className={`${linkCls} flex items-center gap-1 transform-gpu transition-all duration-500`}
                     >
                       {l.label}
-                      <ChevronDown className={`size-3.5 transition-transform duration-300 ${hoveringServices ? "rotate-180" : ""}`} />
+                      <ChevronDown
+                        className={`size-3.5 transition-transform duration-300 ${hoveringServices ? "rotate-180" : ""}`}
+                      />
                     </Link>
 
                     {/* Dropdown Menu */}
@@ -122,8 +128,12 @@ export function Nav() {
                             <Smartphone className="size-4" />
                           </div>
                           <div className="text-left">
-                            <div className="text-xs font-semibold text-foreground">Recharge Services</div>
-                            <div className="text-[10px] text-muted-foreground">Mobile, DTH &amp; FASTag</div>
+                            <div className="text-xs font-semibold text-foreground">
+                              Recharge Services
+                            </div>
+                            <div className="text-[10px] text-muted-foreground">
+                              Mobile, DTH &amp; FASTag
+                            </div>
                           </div>
                         </Link>
                         <Link
@@ -135,8 +145,12 @@ export function Nav() {
                             <Zap className="size-4 animate-pulse" />
                           </div>
                           <div className="text-left">
-                            <div className="text-xs font-semibold text-foreground">Bill Payments</div>
-                            <div className="text-[10px] text-muted-foreground">Electricity, Gas, Water</div>
+                            <div className="text-xs font-semibold text-foreground">
+                              Bill Payments
+                            </div>
+                            <div className="text-[10px] text-muted-foreground">
+                              Electricity, Gas, Water
+                            </div>
                           </div>
                         </Link>
                         <Link
@@ -148,8 +162,12 @@ export function Nav() {
                             <Landmark className="size-4" />
                           </div>
                           <div className="text-left">
-                            <div className="text-xs font-semibold text-foreground">Banking Services</div>
-                            <div className="text-[10px] text-muted-foreground">AEPS, Money Transfer</div>
+                            <div className="text-xs font-semibold text-foreground">
+                              Banking Services
+                            </div>
+                            <div className="text-[10px] text-muted-foreground">
+                              AEPS, Money Transfer
+                            </div>
                           </div>
                         </Link>
                       </div>

@@ -1,9 +1,29 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import {
-  Sparkles, ShieldCheck, ArrowRight, Check, Smartphone, Tv, Zap, Flame,
-  Droplet, Wifi, Car, Landmark, FileText, Wallet, Building2, Repeat,
-  CreditCard, Network, BarChart3, Headphones, Lock, Rocket, Globe,
+  Sparkles,
+  ShieldCheck,
+  ArrowRight,
+  Check,
+  Smartphone,
+  Tv,
+  Zap,
+  Flame,
+  Droplet,
+  Wifi,
+  Car,
+  Landmark,
+  FileText,
+  Wallet,
+  Building2,
+  Repeat,
+  CreditCard,
+  Network,
+  BarChart3,
+  Headphones,
+  Lock,
+  Rocket,
+  Globe,
 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
@@ -13,9 +33,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "mPayHub — Digital Payment Solutions for Growing Businesses" },
-      { name: "description", content: "Unified fintech platform for recharge, bill payments, AEPS, BBPS, and money transfer. Built for retailers, distributors and enterprises." },
+      {
+        name: "description",
+        content:
+          "Unified fintech platform for recharge, bill payments, AEPS, BBPS, and money transfer. Built for retailers, distributors and enterprises.",
+      },
       { property: "og:title", content: "mPayHub — Digital Payment Infrastructure" },
-      { property: "og:description", content: "Secure, scalable B2B fintech platform powering India's retailers, distributors and enterprises." },
+      {
+        property: "og:description",
+        content:
+          "Secure, scalable B2B fintech platform powering India's retailers, distributors and enterprises.",
+      },
     ],
   }),
   component: Index,
@@ -38,29 +66,55 @@ function Hero() {
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-7 text-center lg:text-left">
-          <Reveal delay={0} className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full">
+          <Reveal
+            delay={0}
+            className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-white/80 px-3 sm:px-4 py-1.5 text-xs font-medium shadow-card max-w-full"
+          >
             <Sparkles className="size-3.5 text-brand-blue" />
-            <span className="text-muted-foreground">A new fintech platform for India's next wave of partners</span>
+            <span className="text-muted-foreground">India's Next-Gen B2B Fintech Platform</span>
           </Reveal>
-          <Reveal as="h1" delay={120} className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
+          <Reveal
+            as="h1"
+            delay={120}
+            className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground"
+          >
             Digital Payment Solutions for{" "}
             <span className="text-gradient-brand">Growing Businesses</span>
           </Reveal>
-          <Reveal as="p" delay={240} className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0">
-            mPayHub is an emerging fintech platform unifying recharge, bill payments, banking and digital financial services. We are onboarding our founding partners — retailers, distributors and enterprises — who want to grow with a modern, secure and transparent payment infrastructure from day one.
+          <Reveal
+            as="p"
+            delay={240}
+            className="mt-5 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mx-auto lg:mx-0"
+          >
+            mPayHub is a unified B2B fintech platform for secure mobile recharge, utility bill
+            payments, money transfers, and banking services. Expand your business with India's
+            modern payment network.
           </Reveal>
-          <Reveal delay={360} className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
-            <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
+          <Reveal
+            delay={360}
+            className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4"
+          >
+            <a
+              href="https://partner.mpayhub.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition"
+            >
               Become a Founding Partner <ArrowRight className="size-4" />
             </a>
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition"
+            >
               Explore Services
             </Link>
           </Reveal>
         </div>
         <Reveal delay={300} y={24} className="lg:col-span-5">
           <div className="rounded-3xl bg-white border border-border/60 shadow-soft p-5 sm:p-7">
-            <div className="text-xs font-semibold tracking-wider text-brand-blue uppercase">Why Businesses Trust Us</div>
+            <div className="text-xs font-semibold tracking-wider text-brand-blue uppercase">
+              Why Businesses Trust Us
+            </div>
             <ul className="mt-5 space-y-3">
               {trust.map((t) => (
                 <li key={t} className="flex items-start gap-3 text-sm">
@@ -72,10 +126,16 @@ function Hero() {
               ))}
             </ul>
             <div className="mt-6 grid grid-cols-3 gap-3 text-center">
-              {[["99.9%", "Target Uptime"], ["24/7", "Partner Support"], ["Bank-grade", "Security"]].map(([v, l]) => (
+              {[
+                ["99.9%", "Target Uptime"],
+                ["24/7", "Partner Support"],
+                ["Bank-grade", "Security"],
+              ].map(([v, l]) => (
                 <div key={l} className="rounded-xl bg-muted/50 p-2 sm:p-3 min-w-0">
                   <div className="text-sm sm:text-lg font-bold text-brand-blue truncate">{v}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{l}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                    {l}
+                  </div>
                 </div>
               ))}
             </div>
@@ -105,13 +165,25 @@ function Services() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Service Overview</div>
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Comprehensive <span className="text-gradient-brand">Digital Payment Services</span></h2>
-          <p className="mt-4 text-sm sm:text-base text-muted-foreground">Access every major recharge, bill payment, banking, and financial service through a single platform — built for retailers, distributors and enterprises seeking efficient transaction management.</p>
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">
+            Service Overview
+          </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">
+            Comprehensive <span className="text-gradient-brand">Digital Payment Services</span>
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-muted-foreground">
+            Access every major recharge, bill payment, banking, and financial service through a
+            single platform — built for retailers, distributors and enterprises seeking efficient
+            transaction management.
+          </p>
         </Reveal>
         <div className="mt-10 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 50} className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center">
+            <Reveal
+              key={s.title}
+              delay={i * 50}
+              className="rounded-2xl bg-white p-4 sm:p-5 border border-border/60 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all text-center"
+            >
               <div className="mx-auto size-12 rounded-xl bg-gradient-brand grid place-items-center mb-3">
                 <s.icon className="size-5 text-white" />
               </div>
@@ -120,7 +192,10 @@ function Services() {
           ))}
         </div>
         <Reveal delay={150} className="mt-10 text-center">
-          <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition shadow-card">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:border-brand-blue transition shadow-card"
+          >
             View All Services <ArrowRight className="size-4" />
           </Link>
         </Reveal>
@@ -141,19 +216,39 @@ function PartnerEcosystem() {
     <section className="py-16 sm:py-24 bg-gradient-hero">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <Reveal>
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Partner Ecosystem</div>
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">A <span className="text-gradient-brand">Partner-First</span> Fintech Platform</h2>
-          <p className="mt-5 text-sm sm:text-base text-muted-foreground leading-relaxed">We are opening early access to retailers, distributors and business partners who want to build a digital financial services business with us from the ground up. Our partnership models are designed for sustainable, transparent growth — whether you are launching a single outlet or a regional distribution network.</p>
-          <Link to="/pricing" className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition">
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">
+            Partner Ecosystem
+          </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            A <span className="text-gradient-brand">Partner-First</span> Fintech Platform
+          </h2>
+          <p className="mt-5 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            We are opening early access to retailers, distributors and business partners who want to
+            build a digital financial services business with us from the ground up. Our partnership
+            models are designed for sustainable, transparent growth — whether you are launching a
+            single outlet or a regional distribution network.
+          </p>
+          <Link
+            to="/pricing"
+            className="mt-7 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition"
+          >
             See Partner Plans <ArrowRight className="size-4" />
           </Link>
         </Reveal>
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
           {partnerTiers.map((p, i) => (
-            <Reveal key={p.name} delay={i * 80} className="rounded-2xl bg-white p-4 sm:p-6 border border-border/60 shadow-card min-w-0">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">{p.tag}</div>
+            <Reveal
+              key={p.name}
+              delay={i * 80}
+              className="rounded-2xl bg-white p-4 sm:p-6 border border-border/60 shadow-card min-w-0"
+            >
+              <div className="text-[10px] font-bold uppercase tracking-wider text-brand-blue">
+                {p.tag}
+              </div>
               <div className="mt-2 text-lg sm:text-xl font-bold">{p.name}</div>
-              <div className="mt-3 text-base sm:text-xl font-bold text-gradient-brand leading-snug">{p.income}</div>
+              <div className="mt-3 text-base sm:text-xl font-bold text-gradient-brand leading-snug">
+                {p.income}
+              </div>
               <div className="mt-1 text-xs text-muted-foreground">Designed for</div>
             </Reveal>
           ))}
@@ -164,12 +259,36 @@ function PartnerEcosystem() {
 }
 
 const reasons = [
-  { icon: Lock, title: "Secure Processing", desc: "Bank-grade encryption, fraud monitoring, and compliance with financial regulations." },
-  { icon: ShieldCheck, title: "Regulatory Compliance", desc: "Aligned with industry standards and KYC norms for trusted operations." },
-  { icon: Network, title: "Reliable Infrastructure", desc: "Resilient payment rails engineered for high transaction volumes." },
-  { icon: Rocket, title: "Fast Activation", desc: "Onboard quickly and start transacting after KYC verification." },
-  { icon: BarChart3, title: "Real-time Reporting", desc: "Live dashboards for transactions, settlements and commissions." },
-  { icon: Headphones, title: "Dedicated Support", desc: "Account managers and technical teams ready to help you grow." },
+  {
+    icon: Lock,
+    title: "Secure Processing",
+    desc: "Bank-grade encryption, fraud monitoring, and compliance with financial regulations.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Regulatory Compliance",
+    desc: "Aligned with industry standards and KYC norms for trusted operations.",
+  },
+  {
+    icon: Network,
+    title: "Reliable Infrastructure",
+    desc: "Resilient payment rails engineered for high transaction volumes.",
+  },
+  {
+    icon: Rocket,
+    title: "Fast Activation",
+    desc: "Onboard quickly and start transacting after KYC verification.",
+  },
+  {
+    icon: BarChart3,
+    title: "Real-time Reporting",
+    desc: "Live dashboards for transactions, settlements and commissions.",
+  },
+  {
+    icon: Headphones,
+    title: "Dedicated Support",
+    desc: "Account managers and technical teams ready to help you grow.",
+  },
 ];
 
 function Trust() {
@@ -177,12 +296,20 @@ function Trust() {
     <section className="py-16 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">Trust & Reliability</div>
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Why Businesses <span className="text-gradient-brand">Trust Us</span></h2>
+          <div className="text-sm font-semibold text-brand-blue uppercase tracking-wider">
+            Trust & Reliability
+          </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">
+            Why Businesses <span className="text-gradient-brand">Trust Us</span>
+          </h2>
         </Reveal>
         <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map((r, i) => (
-            <Reveal key={r.title} delay={i * 70} className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all">
+            <Reveal
+              key={r.title}
+              delay={i * 70}
+              className="rounded-2xl bg-white p-6 border border-border/60 shadow-card hover:shadow-soft transition-all"
+            >
               <div className="size-12 rounded-xl bg-gradient-brand grid place-items-center mb-4">
                 <r.icon className="size-5 text-white" />
               </div>
@@ -204,28 +331,49 @@ function GrowthCTA() {
           <div className="absolute -top-20 -right-20 size-72 rounded-full bg-white/10 blur-3xl" />
           <div className="relative grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <Reveal>
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium"><Globe className="size-3.5" /> Building Together</div>
-              <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">An Emerging Platform with <span className="opacity-90">Real Ambition</span></h2>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium">
+                <Globe className="size-3.5" /> Building Together
+              </div>
+              <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+                An Emerging Platform with <span className="opacity-90">Real Ambition</span>
+              </h2>
               <p className="mt-4 text-sm sm:text-base text-white/90 leading-relaxed">
-                We are a new fintech venture setting out to build a transparent, reliable payment infrastructure for India's businesses. We do not claim decades of legacy — instead, we bring a dedicated team, clear milestones, robust technology, and an unwavering commitment to earning your trust from the very first transaction.
+                We are a new fintech venture setting out to build a transparent, reliable payment
+                infrastructure for India's businesses. We do not claim decades of legacy — instead,
+                we bring a dedicated team, clear milestones, robust technology, and an unwavering
+                commitment to earning your trust from the very first transaction.
               </p>
               <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-                <a href="https://partner.mpayhub.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition">
+                <a
+                  href="https://partner.mpayhub.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition"
+                >
                   Join Early Access <ArrowRight className="size-4" />
                 </a>
-                <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/10 transition">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/10 transition"
+                >
                   Talk to Our Team
                 </Link>
               </div>
             </Reveal>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {([
-                ["100", "Initial Partner Cohort"],
-                ["10,000+", "Target Daily Transactions"],
-                ["99.5%", "Uptime Commitment"],
-                ["Zero", "Hidden Platform Fees"],
-              ] as const).map(([v, l], i) => (
-                <Reveal key={l} delay={i * 80} className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-4 sm:p-5 min-w-0">
+              {(
+                [
+                  ["100", "Initial Partner Cohort"],
+                  ["10,000+", "Target Daily Transactions"],
+                  ["99.5%", "Uptime Commitment"],
+                  ["Zero", "Hidden Platform Fees"],
+                ] as const
+              ).map(([v, l], i) => (
+                <Reveal
+                  key={l}
+                  delay={i * 80}
+                  className="rounded-2xl bg-white/10 backdrop-blur border border-white/20 p-4 sm:p-5 min-w-0"
+                >
                   <div className="text-2xl sm:text-3xl font-bold truncate">{v}</div>
                   <div className="mt-1 text-xs uppercase tracking-wider text-white/80">{l}</div>
                 </Reveal>
