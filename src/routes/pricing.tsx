@@ -45,7 +45,7 @@ const tiers = [
     tag: "Entry Level",
     desc: "Ideal for local shops, service centers and entrepreneurs.",
     income: "Local storefront",
-    commission: "5% – 10%",
+    commission: "Up to 3.5% / Rs. 15 per Txn",
     features: [
       "Free onboarding support",
       "Basic business dashboard",
@@ -59,7 +59,7 @@ const tiers = [
     tag: "Popular Choice",
     desc: "Perfect for businesses managing multiple retailers.",
     income: "Multi-retailer network",
-    commission: "10% – 15%",
+    commission: "Override margin up to 0.5%",
     popular: true,
     features: [
       "Retailer management tools",
@@ -74,7 +74,7 @@ const tiers = [
     tag: "Professional",
     desc: "Designed for entrepreneurs building larger distribution networks.",
     income: "District coverage",
-    commission: "15% – 20%",
+    commission: "Override margin up to 0.8%",
     features: [
       "District-level management",
       "Real-time analytics",
@@ -88,7 +88,7 @@ const tiers = [
     tag: "Enterprise",
     desc: "For businesses seeking regional expansion and large-scale network management.",
     income: "State-wide expansion",
-    commission: "20% – 25%",
+    commission: "Override margin up to 1.2% + share",
     features: [
       "State-level network control",
       "Advanced reporting systems",

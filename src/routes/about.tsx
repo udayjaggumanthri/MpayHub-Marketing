@@ -209,7 +209,7 @@ function AboutPage() {
               Ready to grow with mPayHub?
             </h2>
             <p className="mt-3 text-sm sm:text-base text-white/90">
-              Be among the founding partners shaping a new digital payments network in India.
+              Partner with India's most secure and scalable B2B digital payment network to accelerate your business growth.
             </p>
             <Link
               to="/contact"

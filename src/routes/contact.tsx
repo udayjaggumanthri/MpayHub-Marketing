@@ -3,7 +3,7 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
-import { Mail, MapPin, Phone, MessageCircle, Briefcase, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -25,28 +25,16 @@ export const Route = createFileRoute("/contact")({
 
 const channels = [
   {
-    icon: Briefcase,
-    label: "Business Inquiries",
-    value: "contact@prajnadharaedu.com",
-    note: "Sales & partnership team",
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp Support",
-    value: "(+91) 9052513888",
-    note: "Onboarding & quick help",
-  },
-  {
     icon: Mail,
-    label: "Email Support",
-    value: "contact@prajnadharaedu.com",
-    note: "Technical & account help",
+    label: "Email Address",
+    value: "hello@mpayhub.in",
+    note: "For support & business inquiries",
   },
   {
     icon: Phone,
-    label: "Phone Support",
-    value: "(+91) 9052513888",
-    note: "Speak with a specialist",
+    label: "Mobile Number",
+    value: "+91 7075675222",
+    note: "Call or message us",
   },
   {
     icon: MapPin,

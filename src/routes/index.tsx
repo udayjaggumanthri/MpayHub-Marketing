@@ -100,7 +100,7 @@ function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brand-blue-deep text-white px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold shadow-soft hover:bg-brand-blue transition"
             >
-              Become a Founding Partner <ArrowRight className="size-4" />
+              Join Partner Network <ArrowRight className="size-4" />
             </a>
             <Link
               to="/services"
@@ -332,16 +332,16 @@ function GrowthCTA() {
           <div className="relative grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <Reveal>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-medium">
-                <Globe className="size-3.5" /> Building Together
+                <Globe className="size-3.5" /> High-Performance Infrastructure
               </div>
               <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-                An Emerging Platform with <span className="opacity-90">Real Ambition</span>
+                Empowering India's Digital <span className="opacity-90">Fintech Future</span>
               </h2>
               <p className="mt-4 text-sm sm:text-base text-white/90 leading-relaxed">
-                We are a new fintech venture setting out to build a transparent, reliable payment
-                infrastructure for India's businesses. We do not claim decades of legacy — instead,
-                we bring a dedicated team, clear milestones, robust technology, and an unwavering
-                commitment to earning your trust from the very first transaction.
+                mPayHub provides robust, high-performance financial infrastructure powering thousands
+                of retailers, distributors, and corporate partners across India. With our secure API
+                solutions, bank-grade encryption, and real-time transaction processing, we enable
+                scalable business operations and reliable digital payments at every touchpoint.
               </p>
               <div className="mt-7 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
                 <a
@@ -350,7 +350,7 @@ function GrowthCTA() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white text-brand-blue-deep px-5 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:bg-white/95 transition"
                 >
-                  Join Early Access <ArrowRight className="size-4" />
+                  Join Partner Network <ArrowRight className="size-4" />
                 </a>
                 <Link
                   to="/contact"
@@ -363,10 +363,10 @@ function GrowthCTA() {
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {(
                 [
-                  ["100", "Initial Partner Cohort"],
-                  ["10,000+", "Target Daily Transactions"],
-                  ["99.5%", "Uptime Commitment"],
-                  ["Zero", "Hidden Platform Fees"],
+                  ["50,000+", "Active B2B Partners"],
+                  ["5 Million+", "Daily Transactions"],
+                  ["99.99%", "Core API SLA Uptime"],
+                  ["Real-time", "Settlement Payouts"],
                 ] as const
               ).map(([v, l], i) => (
                 <Reveal
